@@ -8,6 +8,11 @@ html {
     background-image: url("../img/bkgjpg.jpg");
 }
 
+html, body {
+    /* Bottom footer */
+    height: 100%;
+}
+
 @font-face {
     font-family: mariofont;
     src: url(../fonts/mariofont.ttf);
@@ -27,6 +32,11 @@ html {
     "footer"
     ;
     justify-items: center;
+    /* Bottom footer */
+    min-height: 100%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    
 }
 
 .webMargins {
