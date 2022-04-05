@@ -103,6 +103,20 @@ ul li {
     z-index: 999;
 }
 
+.headerMain__container--pages {
+    position: relative;
+    animation-name: slide;
+    animation-duration: 1s;
+    right: 105%;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    100% {
+        right: 0;
+    }
+}
+
 .container__navBar ul{
     display: flex;
     flex-direction: row;
