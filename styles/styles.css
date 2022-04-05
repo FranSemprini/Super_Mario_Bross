@@ -11,6 +11,7 @@ html {
 html, body {
     /* Bottom footer */
     height: 100%;
+    width: 100%;
 }
 
 @font-face {
@@ -195,6 +196,7 @@ ul li {
     background: red;
     width: 100%;
     box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
+    align-items: center;
 } 
 
 .footerImg {
@@ -397,7 +399,7 @@ ul li {
 /* CONTACTO */
 
 .formContact {
-    width: 60%;
+    width: 80%;
 }
 
 .contacto__img--mobile {
@@ -815,7 +817,7 @@ textarea {
 
     .formSection {
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
     .formContact li, .formContact p {
@@ -983,5 +985,9 @@ textarea {
     /* CONTACTO */
     #formButton--green, #formButton--red {
         font-size: 2rem;
+    }
+
+    .formSection {
+        flex-wrap: nowrap;
     }
 }
