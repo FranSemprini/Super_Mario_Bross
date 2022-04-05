@@ -1,0 +1,977 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    background-image: url("../img/bkgjpg.jpg");
+}
+
+@font-face {
+    font-family: mariofont;
+    src: url(../fonts/mariofont.ttf);
+}
+
+@font-face {
+    font-family: pressStart;
+    src: url(../fonts/pressstart.ttf);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    justify-items: center;
+}
+
+.webMargins {
+    margin: 1rem 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Fredoka', cursive;
+    font-size: 1.6rem;
+}
+
+.centeredText {
+    text-align: center;
+}
+
+.justifiedText {
+    text-align: justify;
+}
+
+.pageTitle h1 {
+    font-size: 3.4rem;
+    font-family: marioFont;
+}
+
+.pageTitle h4 {
+    font-size: 1.2rem;
+    font-family: 'Fredoka', cursive;
+}
+
+.pageSubtitle {
+    font-size: 2.2rem;
+    font-family: mariofont;
+    margin: 1.5rem 0;
+}
+
+.hide {
+    display: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+/* NAVBAR */
+
+.headerMain--sticky {
+    position: sticky;
+    top: 0;
+}
+
+.navBar__coin--desktop {
+    display: none;
+}
+
+.headerMain {
+    grid-area: header;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(77,152,28,1) 0%, rgba(77,133,38,1) 6%, rgba(176,237,157,1) 71%, rgba(89,164,34,1) 94%, rgba(103,138,80,1) 100%);
+    box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
+    z-index: 999;
+}
+
+.container__navBar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container__navBar ul li {
+    font-size: 0.8rem;
+    margin: 0.5rem 0.5rem;
+    font-family: pressStart;
+}
+
+.container__navBar ul li a{
+    color: black;
+}
+
+.navLogo {
+    width: 8rem;
+    height: auto;
+    margin: 0.5rem 0 0.5rem 0;
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.55);
+}
+
+.centeredFlex {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* INDEX */
+
+.mainContent {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContent__mainImg--mobile {
+    background-image: url("../img/mobile/mainImgMobile.png");
+    width: 100%;
+    height: auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 500px 320px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "mario . luigi"
+    ;
+    box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
+    overflow: hidden;
+}
+
+.mainContent__mainImg--desktop {
+    display: none;
+}
+
+.mainImg__marioMain {
+    grid-area: mario;
+    width: 150px;
+    height: auto;
+    transition: transform 2s; 
+}
+
+.mainImg__marioMain:hover {
+    transform: scale(1.05);
+}
+
+.mainImg__luigiMain:hover {
+    transform: scale(1.05);
+}
+
+.mainImg__luigiMain {
+    grid-area: luigi;
+    width: 150px;
+    height: auto;
+    transition: transform 2s;
+}
+
+/* FOOTER */
+
+.footerMain {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "logo footerMain__socialCopy ."
+    ;
+    background: red;
+    width: 100%;
+    box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
+} 
+
+.footerImg {
+    width: 5rem;
+    grid-area: logo;
+    margin-left: 2rem;
+}
+
+.footerMain__socialCopy p, .footerMain__socialCopy__socialNetworls{
+    font-size: 1.4rem;
+    color: white;
+}
+
+.footerMain__socialCopy__socialNetworls a{
+    color: white;
+    transition: color 0.5s;
+}
+
+.footerMain__socialCopy__socialNetworls a:hover{
+    color: blue;
+}
+
+.socialCopy__copyright p{
+    font-size: 0.6rem;
+    color: white;
+}
+
+/* INFO */
+.info1__img--mobile {
+    width: 8rem;
+}
+
+.info2__img--mobile {
+    width: 10rem;
+}
+
+.info1__img--desktop, .info2__img--desktop {
+    display: none;
+}
+
+.info--flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoreTable {
+    font-size: 0.9rem;
+    font-family: pressStart;
+    border: 2px dashed black;
+}
+
+.scoreTable th {
+    border-bottom: dashed 2.5px black;
+}
+
+.parallax {
+    width: 100%;
+    height: 5rem;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 0px 30px 0px 30px;
+  
+}
+
+.parallax__container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    grid-template-areas: 
+    "v1"
+    "v2"
+    ; 
+}
+
+.parrallax--w1 {
+    grid-area: v1;
+}
+
+.parrallax--w2 {
+    grid-area: v2;
+}
+
+.parrallax--w3 {
+    grid-area: v3;
+}
+
+.parrallax--w4 {
+    grid-area: v4;
+}
+
+.parallax--img1{
+ background-image: url("../img/mobile/parallax1.jpg");
+}
+
+/* CARD SECTION */
+
+.cardSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.flipCard {
+    background-color: transparent;
+    width: 25rem;
+    height: 33rem;
+    perspective: 1000px;
+    border-radius: 50px;
+    margin: 2rem;
+    z-index: 0;
+}
+
+.flipCard__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.55);
+    border-radius: 50px;
+}
+
+.flipCard:hover .flipCard__inner {
+    transform: rotateY(180deg);
+  }
+
+.flipCard__front, .flipCard__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+.flipCard__back {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 18%, rgba(232,161,8,1) 100%);    color: white;
+    transform: rotateY(180deg);
+    border-radius: 50px;
+  }
+
+.flipCard__back h1{
+    font-size: 3rem;
+    font-family: mariofont;
+    color: black;
+    margin: 1rem;
+  }
+
+.flipCard__back p {
+    font-size: 2rem;
+    color: black;
+    margin: 0 1rem;
+  }
+
+.flipCard__front img {
+    width: 25rem;
+    height: 33rem;
+    border-radius: 50px;
+}
+
+/* MULTIMEDIA */
+
+.containerMusic--mobile, .containerVids {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerWallpapers img {
+    width: 100%;
+    height: auto;
+}
+
+.containerVids p{
+    margin-bottom: 1rem;
+}
+
+.containerMusic__spotiStyle--desktop {
+    display: none;
+    }
+
+.containerVids iframe {
+    width: 270px;
+    height: 151px;
+}
+
+.containerMusic--mobile iframe {
+    width: 100%;
+}
+
+.titleImg--desktop {
+    display: none;
+}
+
+/* CONTACTO */
+
+.formContact {
+    width: 60%;
+}
+
+.contacto__img--mobile {
+    width: 60%;
+    height: auto;
+    display: block;
+}
+
+.contacto__img--desktop{
+    display: none;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.formSection li  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formContact li, .formContact p {
+    margin: 5px;
+    font-family: mariofont;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.formContact input{
+    margin: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid blue;
+    width: 100%;
+}
+
+.formContact input:focus, textarea:focus {
+    outline: none;
+    border: 3px solid red;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.formH {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 180px;
+    width: 100%;
+    border: none;
+    background-color:rgb(240, 240, 240) ;
+    font-family: 'Fredoka', cursive;
+}
+
+#formButton--green, #formButton--red {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 4px 2px;
+    opacity: 0.7;
+    cursor: pointer;
+    border: none;
+    background-color: green; 
+    transition: opacity 0.5s;
+}
+
+#formButton--red {
+    background-color: red; 
+}
+
+#formButton--red:hover, #formButton--green:hover {
+    opacity: 1;
+}
+
+/* MEDIA QUERIES */
+/* TABLET */
+@media screen and (min-width: 500px) {
+    .container{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer"
+    ;
+    }
+
+    .pageTitle h1{
+        font-size: 5rem;
+    }
+
+    .pageTitle h4 {
+        font-size: 1.6rem;
+    }
+
+    .pageSubtitle {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.9rem;
+    }
+
+    /* HEADER */
+
+    .headerMain__container {
+        display: grid;
+        grid-template-columns: 0.5fr 3fr 0.5fr;
+        grid-template-areas:
+        "logo ul ."
+        ;
+        align-items: center;
+    }
+
+    .headerMain__container--pages {
+        background: linear-gradient(0deg, rgba(77,152,28,1) 0%, rgba(77,133,38,1) 6%, rgba(176,237,157,1) 71%, rgba(89,164,34,1) 94%, rgba(103,138,80,1) 100%);
+        box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .navLogo {
+        width: 110px;
+    }
+    .container__navBar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-area: ul;
+    }
+
+    .container__navBar ul li {
+        margin: 0 1rem;
+        font-size: 1.2rem;
+    }
+
+    .headerMain {
+        background: none;
+        box-shadow: none;
+        position: absolute;
+        z-index: 9999;
+        margin-top: 1.5rem;
+    }
+
+    .navBar__coin--desktop {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        width: 2.2rem;
+        height: auto;
+        position: absolute;
+        transition: all 0.5s;
+        top: -1rem;
+     }
+
+    .navBar__containerWCoin {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        position: relative;
+        padding: 0.5rem 0;
+    }
+
+    .navBar__containerWCoin:hover .navBar__coin--desktop  {
+        visibility: visible;
+        opacity: 1;
+        transform: translatey(-15px) rotateY(180deg);
+    }
+
+    .headerMain--sticky {
+        position: sticky;
+        top: 0;
+    }
+
+    /* INDEX */
+    .mainContent__mainImg--desktop {
+        background-image: url("../img/desktop/portada.jpg");
+        background-position: bottom ;
+        background-repeat: no-repeat;
+        background-size: 1200px auto;
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(9, 47px);
+        grid-template-areas: 
+        ". . . . ."
+        "nube1 nube1 nube1 . ."
+        ". . nube2 nube2 nube2"
+        "mario . . . luigi"
+        "mario . . . luigi"
+        "mario . bloque . luigi"
+        "mario . minimario . luigi"
+        "mario . . . luigi"
+        "mario . . . luigi"
+        ;
+        box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
+        overflow: hidden;
+        align-content: space-between;
+        }
+
+    .mainContent__mainImg--mobile {
+            display: none;
+    }
+
+    .mainImg__nube1, .mainImg__nube2 {
+        grid-area: nube1;
+        justify-self: center;
+        width: 80px;
+        height: auto;
+        animation-name: nube1;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;  
+        animation-duration: 10s;
+        animation-delay: 0ms;
+        z-index: 0;
+    }
+
+    .mainImg__nube2 {
+        grid-area: nube2;
+        width: 100px;
+        animation-name: nube2;
+    }
+    
+    @keyframes nube1 {
+        0% {transform: translate(0px, 0px)}
+        25% {transform: translate(-4px, -4px)}
+        50% {transform: translate(4px, 4px)}
+        75% {transform: translate(-8px, -8px)}
+        100% {transform: translate(0px, 0px)}
+    }
+
+    @keyframes nube2 {
+        0% {transform: translate(0px, 0px)}
+        25% {transform: translate(5px, 5px)}
+        50% {transform: translate(2px, 2px)}
+        75% {transform: translate(-3px, -3px)}
+        100% {transform: translate(0px, 0px)}
+    }
+
+    .mainImg__bloque {
+        grid-area: bloque;
+        align-self: flex-start;
+        width: 33px;
+        height: auto;
+        z-index: 2;
+    }
+
+    .mainImg__miniMarioMain {
+        grid-area: minimario;
+        width: 35px;
+        align-self: flex-end;
+        transition: transform 0.3s;
+    }
+
+    /* .mainImg__miniMarioMain:hover {
+        transform: translatey(-27px);
+    } */
+
+    .mainImg__marioMain, .mainImg__luigiMain{
+        justify-self: flex-start;
+        align-self: flex-end;
+        width: 220px;
+        z-index: 900;
+    }
+
+    .mainImg__luigiMain {
+        justify-self: flex-end;
+    }
+
+
+
+
+    /* INFO */
+
+    .parrallax--w3, .parrallax--w4, .info1__img--desktop, .info2__img--desktop {
+        display: block;
+    }
+
+    .info1__img--desktop {
+        width: 15rem;
+        float: left;
+    }
+
+    .info2__img--desktop {
+        width: 20rem;
+        float: right;
+    }
+
+    .info1__img--mobile, .info2__img--mobile {
+        display: none;
+    }  
+
+    .scoreTable {
+        font-size: 1.5rem;
+    }
+
+    .parallax__container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.4rem;
+        grid-template-areas: 
+        "v1 v1 v2"
+        "v3 v4 v4"
+        ; 
+    }
+
+    /* MULTIMEDIA */
+
+    .containerWallpapers__gallery {
+        display: grid;
+        grid-template-columns: 0.8fr 0.8fr 0.8fr 1.6fr;
+        grid-template-rows: 1.5fr 1fr 0.5fr;
+        grid-template-areas: 
+        "foto1 foto1 foto1 foto2"
+        "foto3 foto3 foto4 foto4"
+        "foto5 foto6 foto4 foto4"
+        ; 
+    }
+
+    .multimedia__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .galeria1 {
+        grid-area: foto1;
+    }
+    
+    .galeria2 {
+        grid-area: foto2;
+    }
+    
+    .galeria3 {
+        grid-area: foto3;
+    }
+    
+    .galeria4 {
+        grid-area: foto4;
+    }
+    
+    .galeria5 {
+        grid-area: foto5;
+    }
+    
+    .galeria6 {
+        grid-area: foto6;
+    }
+    .containerMusic__spotiStyle--desktop {
+        display: block;
+    }
+
+    .containerVids__gallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .containerVids iframe {
+        width: 270px;
+        height: 151px;
+    }
+
+    .titleImg--desktop {
+        display: inline;
+    }
+
+    .containerMusic__spotiStyle--desktop {
+        width: 100%; 
+        height: 100%
+    }
+
+    /* FOOTER */
+    .footerImg {
+        width: 7rem;
+    }
+    
+    .footerMain__socialCopy p, .footerMain__socialCopy__socialNetworls{
+        font-size: 2rem;
+    }
+    
+    .socialCopy__copyright p {
+        font-size: 1rem;
+    }
+
+    .containerMusic--mobile {
+        display: none;
+    }
+
+    /* CONTACTO */
+
+    .contacto__img--mobile {
+        display: none;
+    }
+
+    .contacto__img--desktop {
+        display: block;
+        width: 55%;
+        height: auto;
+    }
+
+    .formSection {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .formContact li, .formContact p {
+        font-size: 2rem;
+    }
+
+    #formButton--green, #formButton--red  {
+        font-size: 1.6rem;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+    .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header header header"
+    "main main main main main"
+    "footer footer footer footer footer"
+    ;
+    }
+
+    .pageTitle h1{
+        font-size: 7rem;
+    }
+
+    .pageTitle h4 {
+        font-size: 2rem;
+    }
+
+    .pageSubtitle {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 2.1rem;
+    }
+
+    /* NAVBAR */
+    .container__navBar ul li {
+        margin: 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    .navBar__coin--desktop {
+        width: 2.7rem;
+    }
+
+     /* INDEX */
+    .mainContent__mainImg--mobile {
+        display: none;
+    }
+
+    .mainContent__mainImg--desktop {
+        background-size: 2000px auto;
+        grid-template-rows: repeat(9, 85px);
+        grid-template-areas: 
+        ". . . . ."
+        "nube1 nube1 nube1 . ."
+        ". . nube2 nube2 nube2"
+        "mario . . . luigi"
+        "mario . . . luigi"
+        "mario . bloque . luigi"
+        "mario . minimario . luigi"
+        "mario . minimario . luigi"
+        "mario . . . luigi"
+        ;
+        }
+
+    .navBar__coin--desktop {
+        font-size: 3rem;
+    }
+
+    .navLogo {
+        width: 16rem;
+    }
+
+    .navBar__containerWCoin {
+        padding: 0.7rem;
+    }
+
+    .container__navBar ul {
+        font-size: 1.8rem;
+    }
+
+    .container__navBar ul li {
+        margin: 0 2rem;
+    }
+
+    .mainImg__nube1 {
+        width: 160px;
+    }
+
+    .mainImg__nube2 {
+        width: 200px;
+    }
+
+    .mainImg__miniMarioMain {
+        width: 57px;
+        align-self: center;
+    }
+
+    /* .mainImg__miniMarioMain:hover {
+        transform: translatey(-57px);
+    } */
+
+    .mainImg__bloque {
+        width: 53px;
+        align-self: flex-end;
+    }
+
+    .mainImg__marioMain, .mainImg__luigiMain {
+        width: 470px;
+    }
+
+    .scoreTable {
+        font-size: 1.7rem;
+    }
+
+    /* INFO */
+
+    .info1__img--desktop {
+        width: 20rem;
+    }
+
+    .info2__img--desktop {
+        width: 25rem;
+    }
+
+    .scoreTable {
+        font-size: 2rem;
+    }
+
+    /* CARDS */
+    .flipCard, .flipCard__front img {
+        width: 30rem;
+        height: 40rem;
+    }
+
+    /* FOOTER */
+    .footerImg {
+        width: 10rem;
+    }
+    
+    .footerMain__socialCopy p, .footerMain__socialCopy__socialNetworls{
+        font-size: 3rem;
+    }
+
+    .socialCopy__copyright p{
+        font-size: 1.5rem; 
+    }
+
+    /* MULTIMEDIA */
+
+    .containerMusic--mobile {
+        display: none;
+    }
+    
+    .containerVids iframe{
+        width: 500px; 
+        height: 281px;
+    }
+
+    /* CONTACTO */
+    #formButton--green, #formButton--red {
+        font-size: 2rem;
+    }
+}

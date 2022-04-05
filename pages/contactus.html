@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/44a8db26f4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <title>Tributo a Super Mario Mario Bros</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="headerMain headerMain--sticky">
+            <!--HEADER-->
+            <div class="headerMain__container--pages">
+                <a class="centeredFlex" href="../index.html"><img class="navLogo" src="../img/logo.jpg"
+                        alt="aca va el logo"></a>
+                <nav class="container__navBar">
+                    <ul>
+                        <li>
+                            <div class="navBar__containerWCoin">
+                                <a href="info.html">Informacion</a>
+                                <img class="navBar__coin--desktop hide" src="../img/desktop/coin.png" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="navBar__containerWCoin">
+                                <a href="personajes.html">Personajes</a>
+                                <img class="navBar__coin--desktop hide" src="../img/desktop/coin.png" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="navBar__containerWCoin">
+                                <a href="multimedia.html">Multimedia</a>
+                                <img class="navBar__coin--desktop hide" src="../img/desktop/coin.png" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="navBar__containerWCoin">
+                                <a href="contactus.html">Contacto</a>
+                                <img class="navBar__coin--desktop hide" src="../img/desktop/coin.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="mainContent webMargins">
+            <main class="pageTitle webMargins centeredText">
+                <!--CARTAS DE LOS PERSONAJES-->
+                <h1>Contacto</h1>
+                <h4>Ponete en contacto con nosotros</h4>
+            </main>
+
+            <section class="formSection">
+                <!--FORMULARIO DE CONTACTOS-->
+                <img src="../img/mobile/cotactus--mobile.png" class="contacto__img--mobile" alt="Mario">
+                <img src="../img/desktop/contactimg.png" class="contacto__img--desktop" alt="Mario">
+                <div class="formContact">
+                    <form action="">
+                        <ul class="">
+                            <!--NOMBRE + MAIL-->
+                            <li>
+                                <input type="text" name="name" placeholder="">
+                                <label for="name">Nombre</label>
+                            </li>
+                            <li>
+                                <input type="email" name="email" placeholder="">
+                                <label for="email">Email</label>
+                            </li>
+
+                            <li>
+                                <label for="txtarea"></label>
+                                <!--AREA DE TEXTO-->
+                                <textarea name="txtarea" id="">Escrbinos aca tu comentario</textarea>
+                            </li>
+                            <!--TE GUSTO LA PAGINA?-->
+                            <p>
+                                <legend>Te gusto nuestra pagina tributo?</legend>
+                            </p>
+                            <ul class="formH">
+                                <li>
+                                    <label for="fanaticosi">Si</label>
+                                    <input class="form__Radio" type="radio" value="fanaticosi" name="fanatico">
+                                </li>
+                                <li>
+                                    <label for="fanaticono">No</label>
+                                    <input type="radio" value="fanaticono" name="fanatico">
+                                </li>
+                            </ul>
+                            <ul class="formH">
+                                <li><input class="formButton" id="formButton--green" type="submit" value="Enviar">
+                                </li>
+                                <li><input class="formButton" id="formButton--red" type="reset" value="Resetear">
+                                </li>
+                            </ul>
+                    </form>
+                </div>
+        </div>
+        </section>
+
+
+        <!--FOOTER-->
+        <footer class="footerMain">
+            <img class="footerImg" src="../img/mfooter.png" alt="esto es un logo">
+            <div class="footerMain__socialCopy centeredText">
+                <p>Encontranos en nuestras redes</p>
+                <div class="footerMain__socialCopy__socialNetworls">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="socialCopy__copyright">
+                    <p>Esta pagina fue hecha por Fran con material sacado de internet y propio</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
