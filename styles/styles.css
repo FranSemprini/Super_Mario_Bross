@@ -85,6 +85,15 @@ ul li {
     list-style-type: none;
 }
 
+.spinAnim {
+    transition: transform 1s;
+}
+
+.spinAnim:hover {
+    transform: rotateY(360deg);
+}
+
+
 /* NAVBAR */
 
 .headerMain--sticky {
@@ -102,6 +111,11 @@ ul li {
     background: linear-gradient(0deg, rgba(77,152,28,1) 0%, rgba(77,133,38,1) 6%, rgba(176,237,157,1) 71%, rgba(89,164,34,1) 94%, rgba(103,138,80,1) 100%);
     box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
     z-index: 999;
+}
+
+@keyframes slide {
+    100% {transform: translatex(105%);
+    }
 }
 
 .container__navBar ul{
@@ -373,8 +387,13 @@ ul li {
 .containerWallpapers img {
     width: 100%;
     height: auto;
+    transition: transform .5s ease;
 }
 
+.containerWallpapers img:hover {
+    transform: scale(1.01) rotate(2deg);
+    z-index: 1;
+} 
 .containerVids p{
     margin-bottom: 1rem;
 }
@@ -530,12 +549,18 @@ textarea {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: center;   
+        position: relative;
+        animation-name: slide;
+        animation-duration: 1s;
+        right: 105%;
+        animation-fill-mode: forwards;
     }
     
     .navLogo {
         width: 110px;
     }
+
     .container__navBar ul {
         flex-direction: row;
         flex-wrap: wrap;
@@ -602,7 +627,7 @@ textarea {
         "nube1 nube1 nube1 . ."
         ". . nube2 nube2 nube2"
         "mario . . . luigi"
-        "mario . . . luigi"
+        "mario . hongo . luigi"
         "mario . bloque . luigi"
         "mario . minimario . luigi"
         "mario . . . luigi"
@@ -614,8 +639,8 @@ textarea {
         }
 
     .mainContent__mainImg--mobile {
-            display: none;
-    }
+        display: none;
+        }
 
     .mainImg__nube1, .mainImg__nube2 {
         grid-area: nube1;
@@ -660,16 +685,45 @@ textarea {
         z-index: 2;
     }
 
+    .mainImg__hongo {
+        grid-area: hongo;
+        align-self: flex-end;
+        width: 33px;
+        height: auto;
+        z-index: 2;
+        animation-name: animhongo;
+        animation-duration: 8s;
+        animation-fill-mode: forwards;
+        animation-delay: 2.2s;
+        position: relative;
+        bottom: -31px;
+        opacity: 0;
+        animation-timing-function: linear;
+    }
+
+    @keyframes animhongo {
+        1% {opacity: 1;}
+        10% {transform: translatey(-31px);}
+        15% {transform: translate(20px, -32px);}
+        30% {transform: translate(100px, 104px);}
+        90% {transform: translate(800px, 104px); opacity: 1;}
+        91% {opacity: 0;}
+    }
+
     .mainImg__miniMarioMain {
         grid-area: minimario;
         width: 35px;
         align-self: flex-end;
-        transition: transform 0.3s;
+        animation-name: minimario;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+        animation-timing-function: linear;
     }
 
-    /* .mainImg__miniMarioMain:hover {
-        transform: translatey(-27px);
-    } */
+    @keyframes minimario {
+        100% {transform: translatey(-27px)};
+    }
 
     .mainImg__marioMain, .mainImg__luigiMain{
         justify-self: flex-start;
@@ -681,9 +735,6 @@ textarea {
     .mainImg__luigiMain {
         justify-self: flex-end;
     }
-
-
-
 
     /* INFO */
 
@@ -716,6 +767,7 @@ textarea {
         "v1 v1 v2"
         "v3 v4 v4"
         ; 
+        margin-top: 1rem;
     }
 
     /* MULTIMEDIA */
@@ -760,6 +812,7 @@ textarea {
     .galeria6 {
         grid-area: foto6;
     }
+
     .containerMusic__spotiStyle--desktop {
         display: block;
     }
@@ -880,7 +933,7 @@ textarea {
         "nube1 nube1 nube1 . ."
         ". . nube2 nube2 nube2"
         "mario . . . luigi"
-        "mario . . . luigi"
+        "mario . hongo . luigi"
         "mario . bloque . luigi"
         "mario . minimario . luigi"
         "mario . minimario . luigi"
@@ -921,9 +974,29 @@ textarea {
         align-self: center;
     }
 
-    /* .mainImg__miniMarioMain:hover {
-        transform: translatey(-57px);
-    } */
+    @keyframes minimario {
+        100% {transform: translatey(-57px)};
+    }
+
+    .mainImg__hongo {
+        width: 50px;
+        height: auto;
+        bottom: -80px;
+        opacity: 0;
+        animation-duration: 8s;
+    }
+
+     @keyframes animhongo {
+        1% {opacity: 1;}
+        10% {transform: translatey(-50px);}
+        15% {transform: translate(40px, -50px);}
+        30% {transform: translate(150px, 170px);}
+        90% {transform: translate(1400px, 170px); opacity: 1;}
+        91% {opacity: 0;}
+     }
+   
+
+
 
     .mainImg__bloque {
         width: 53px;
