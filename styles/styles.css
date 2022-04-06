@@ -84,6 +84,15 @@ ul li {
     list-style-type: none;
 }
 
+.spinAnim {
+    transition: transform 1s;
+}
+
+.spinAnim:hover {
+    transform: rotateY(360deg);
+}
+
+
 /* NAVBAR */
 
 .headerMain--sticky {
@@ -366,6 +375,33 @@ ul li {
 }
 
 /* MULTIMEDIA */
+
+/* .galeria {
+    position: relative;
+}
+
+.galeria::before {
+	position: absolute;
+    background-color: red;
+    content: '';
+    display: block;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+}
+
+.galeria:hover::before {
+	animation: shine .75s;
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+} */
 
 .containerMusic--mobile, .containerVids {
     display: flex;
