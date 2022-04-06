@@ -103,14 +103,6 @@ ul li {
     z-index: 999;
 }
 
-.headerMain__container--pages {
-    position: relative;
-    animation-name: slide;
-    animation-duration: 1s;
-    right: 105%;
-    animation-fill-mode: forwards;
-}
-
 @keyframes slide {
     100% {transform: translatex(105%);
     }
@@ -541,12 +533,18 @@ textarea {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: center;   
+        position: relative;
+        animation-name: slide;
+        animation-duration: 1s;
+        right: 105%;
+        animation-fill-mode: forwards;
     }
     
     .navLogo {
         width: 110px;
     }
+
     .container__navBar ul {
         flex-direction: row;
         flex-wrap: wrap;
@@ -625,8 +623,8 @@ textarea {
         }
 
     .mainContent__mainImg--mobile {
-            display: none;
-    }
+        display: none;
+        }
 
     .mainImg__nube1, .mainImg__nube2 {
         grid-area: nube1;
@@ -694,7 +692,6 @@ textarea {
         30% {transform: translate(100px, 104px);}
         90% {transform: translate(800px, 104px); opacity: 1;}
         91% {opacity: 0;}
-
     }
 
     .mainImg__miniMarioMain {
@@ -722,9 +719,6 @@ textarea {
     .mainImg__luigiMain {
         justify-self: flex-end;
     }
-
-
-
 
     /* INFO */
 
@@ -801,6 +795,7 @@ textarea {
     .galeria6 {
         grid-area: foto6;
     }
+
     .containerMusic__spotiStyle--desktop {
         display: block;
     }
