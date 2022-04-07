@@ -66,70 +66,64 @@
                 <h1>Contacto</h1>
                 <h4>Ponete en contacto con nosotros</h4>
             </main>
-
-            <section class="formSection">
-                <!--FORMULARIO DE CONTACTOS-->
-                <img src="../img/mobile/cotactus--mobile.png" class="contacto__img--mobile spinAnim" alt="Mario de espaldas">
-                <img src="../img/desktop/contactimg.png" class="contacto__img--desktop spinAnim" alt="Mario de espaldas">
-                <div class="formContact">
-                    <form action="">
-                        <ul class="">
-                            <!--NOMBRE + MAIL-->
-                            <li>
-                                <input type="text" name="name" placeholder="">
-                                <label for="name">Nombre</label>
-                            </li>
-                            <li>
-                                <input type="email" name="email" placeholder="">
-                                <label for="email">Email</label>
-                            </li>
-
-                            <li>
-                                <label for="txtarea"></label>
-                                <!--AREA DE TEXTO-->
-                                <textarea name="txtarea" id="">Escrbinos aca tu comentario</textarea>
-                            </li>
-                            <!--TE GUSTO LA PAGINA?-->
-                            <p>
-                                <legend>Te gusto nuestra pagina tributo?</legend>
-                            </p>
-                            <ul class="formH">
-                                <li>
-                                    <label for="fanaticosi">Si</label>
-                                    <input class="form__Radio" type="radio" value="fanaticosi" name="fanatico">
-                                </li>
-                                <li>
-                                    <label for="fanaticono">No</label>
-                                    <input type="radio" value="fanaticono" name="fanatico">
-                                </li>
-                            </ul>
-                            <ul class="formH">
-                                <li><input class="formButton" id="formButton--green" type="submit" value="Enviar">
-                                </li>
-                                <li><input class="formButton" id="formButton--red" type="reset" value="Resetear">
-                                </li>
-                            </ul>
-                    </form>
+            <section class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-1"></div>
+                    <div class="col-sm-12 col-md-5 text-center">
+                        <img src="../img/mobile/cotactus--mobile.png" class="spinAnim img-fluid d-lg-none"
+                            alt="Mario de espaldas">
+                        <img src="../img/desktop/contactimg.png"
+                            class="contacto__img spinAnim img-fluid d-none d-lg-block" alt="Mario de espaldas">
+                    </div>
+                    <div class="col-sm-12 col-md-5">
+                        <form action="">
+                            <div class="mb-5">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 mb-3 input-group-lg">
+                                        <input name="nombre" type="text" class="form-control input-sm"
+                                            placeholder="Nombre" aria-label="Nombre">
+                                    </div>
+                                    <div class="col-sm-12 col-md-8 mb-3 input-group-lg">
+                                        <input name="email" type="email" class="form-control " placeholder="Email"
+                                            aria-label="Email">
+                                    </div>
+                                    <div class="form-floating col-sm-12 mb-3">
+                                        <textarea name="textArea" class="form-control textArea"
+                                            placeholder="Deja tu comentario aca" id="floatingTextarea"
+                                            style="height: 200px"></textarea>
+                                        <label for="Textarea">Deja tu comentario aca</label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 mb-3 input-group-lg">
+                                        <select name="Like" class="form-select form-select-lg"
+                                            aria-label=".form-select-lg example">
+                                            <option selected>Te gusto nuestra pagina tributo?</option>
+                                            <option value="Si">Si</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Enviar" class="btn btn-primary btn-lg"></input>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+            </section>
         </div>
-        </section>
-
-
-        <!--FOOTER-->
-        <footer class="footerMain">
-            <img class="footerImg" src="../img/mfooter.png" alt="Mario">
-            <div class="footerMain__socialCopy centeredText">
-                <p>Encontranos en nuestras redes</p>
-                <div class="footerMain__socialCopy__socialNetworls">
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-square"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <div class="socialCopy__copyright">
-                    <p>Esta pagina fue hecha por Fran con material sacado de internet y propio</p>
-                </div>
+    <!--FOOTER-->
+    <footer class="footerMain">
+        <img class="footerImg" src="../img/mfooter.png" alt="Mario">
+        <div class="footerMain__socialCopy centeredText">
+            <p>Encontranos en nuestras redes</p>
+            <div class="footerMain__socialCopy__socialNetworls">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-        </footer>
+            <div class="socialCopy__copyright">
+                <p>Esta pagina fue hecha por Fran con material sacado de internet y propio</p>
+            </div>
+        </div>
+    </footer>
     </div>
     <script src="../js/bootstrap.js"></script>
 </body>

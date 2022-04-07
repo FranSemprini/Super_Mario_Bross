@@ -170,7 +170,6 @@ ul li {
     min-height: 100%;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
-    
 }
 
 /* INDEX */
@@ -443,91 +442,12 @@ ul li {
 
 /* CONTACTO */
 
-.formContact {
-    width: 80%;
+.contacto__img {
+    max-width: 80%;
 }
 
-.contacto__img--mobile {
-    width: 60%;
-    height: auto;
-    display: block;
-}
-
-.contacto__img--desktop{
-    display: none;
-}
-
-.formSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.formSection li  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.formContact li, .formContact p {
-    margin: 5px;
-    font-family: mariofont;
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.formContact input{
-    margin: 5px;
-    padding: 5px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid blue;
-    width: 100%;
-}
-
-.formContact input:focus, textarea:focus {
-    outline: none;
-    border: 3px solid red;
-    border-radius: 5px;
-    transition: 0.5s;
-}
-
-.formH {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 1rem;
-}
-
-textarea {
-    height: 180px;
-    width: 100%;
-    border: none;
-    background-color:rgb(240, 240, 240) ;
-    font-family: 'Fredoka', cursive;
-}
-
-#formButton--green, #formButton--red {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 4px 2px;
-    opacity: 0.7;
-    cursor: pointer;
-    border: none;
-    background-color: green; 
-    transition: opacity 0.5s;
-}
-
-#formButton--red {
-    background-color: red; 
-}
-
-#formButton--red:hover, #formButton--green:hover {
-    opacity: 1;
+.form-floating > label {
+    margin-left: 1rem;
 }
 
 /* MEDIA QUERIES */
@@ -904,28 +824,22 @@ textarea {
 
     /* CONTACTO */
 
-    .contacto__img--mobile {
-        display: none;
+    .textArea {
+        height: 70px;
+        font-size: 1.6rem;
+      }
+
+    .form-floating > label {
+        font-size: 1.4rem;
+        margin-left: 1rem;
     }
 
-    .contacto__img--desktop {
-        display: block;
-        width: 55%;
-        height: auto;
-    }
-
-    .formSection {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .formContact li, .formContact p {
-        font-size: 2rem;
-    }
-
-    #formButton--green, #formButton--red  {
+    .btn-lg {
         font-size: 1.6rem;
     }
+
+
+
 }
 
 /* DESKTOP */
@@ -1103,11 +1017,11 @@ textarea {
     }
 
     /* CONTACTO */
-    #formButton--green, #formButton--red {
-        font-size: 2rem;
-    }
 
-    .formSection {
-        flex-wrap: nowrap;
-    }
+    .textArea {
+        height: 100px;
+        font-size: 1.8rem;
+      }
+
 }
+
