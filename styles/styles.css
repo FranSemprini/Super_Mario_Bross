@@ -31,7 +31,7 @@ dl, ol, ul {
 }
 
 .webMargins {
-    margin: 1rem 1.5rem;
+    margin: 1rem 7rem;
 }
 
 p {
@@ -423,9 +423,8 @@ ul li {
     margin-bottom: 1rem;
 }
 
-.containerMusic__spotiStyle--desktop {
-    display: none;
-    }
+.spotiContainer {}
+
 
 .containerVids iframe {
     width: 270px;
@@ -448,6 +447,19 @@ ul li {
 
 .form-floating > label {
     margin-left: 1rem;
+}
+
+.spotiContainer {
+    width: 100%;
+    max-width: 569px;
+}
+
+.spotiFrame {
+    width: 100%;
+}
+
+.imgGallery {
+    margin: 5px 0;
 }
 
 /* MEDIA QUERIES */
@@ -779,9 +791,6 @@ ul li {
         grid-area: foto6;
     }
 
-    .containerMusic__spotiStyle--desktop {
-        display: block;
-    }
 
     .containerVids__gallery {
         display: flex;
@@ -798,11 +807,6 @@ ul li {
 
     .titleImg--desktop {
         display: inline;
-    }
-
-    .containerMusic__spotiStyle--desktop {
-        width: 100%; 
-        height: 100%
     }
 
     /* FOOTER */
