@@ -98,9 +98,6 @@ ul li {
 
 /* NAVBAR */
 
-
-/*  */
-
 .navbar--sticky {
     position: sticky;
     top: 0;
@@ -137,7 +134,6 @@ ul li {
     justify-content: center;
     
 }
-
 
 .nav-plain ul li {
     font-size: 0.8rem;
@@ -282,7 +278,6 @@ ul li {
 .container__carousel--2 {
     transform: rotatey(180deg) ;
 }
-
 
 .info--flex {
     display: flex;
@@ -444,7 +439,6 @@ ul li {
     box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.379);
 }
 
-
 /* CONTACTO */
 
 .contacto__img {
@@ -454,7 +448,6 @@ ul li {
 .form-floating > label {
     margin-left: 1rem;
 }
-
 
 /* MEDIA QUERIES */
 /* TABLET */
@@ -707,7 +700,6 @@ ul li {
 
     /* INFO */
 
-
     .parrallax--w3, .parrallax--w4, .info1__img--desktop, .info2__img--desktop {
         display: block;
     }
@@ -754,10 +746,6 @@ ul li {
     
     .socialCopy__copyright p {
         font-size: 1rem;
-    }
-
-    .containerMusic--mobile {
-        display: none;
     }
 
     /* CONTACTO */
@@ -906,14 +894,6 @@ ul li {
     }
 
     /* INFO */
-
-    .info1__img--desktop {
-        width: 20rem;
-    }
-
-    .info2__img--desktop {
-        width: 25rem;
-    }
 
     .scoreTable {
         font-size: 2rem;
