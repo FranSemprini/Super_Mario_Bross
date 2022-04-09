@@ -12,7 +12,7 @@ html, body {
     height: 100%;
     width: 100%;
     background-image: url("../img/bkgjpg.jpg");
-    line-height: normal;
+    line-height: 1.3;
 }
 
 @font-face {
@@ -31,7 +31,11 @@ dl, ol, ul {
 }
 
 .webMargins {
-    margin: 1rem 7rem;
+    margin: 1rem 5rem;
+}
+
+.webMargins--index {
+    margin: 1rem 3rem;
 }
 
 p {
@@ -54,8 +58,9 @@ p {
 }
 
 .pageTitle h4 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: 'Fredoka', cursive;
+    font-weight: bold;
 }
 
 .pageSubtitle {
@@ -264,17 +269,20 @@ ul li {
 }
 
 /* INFO */
-.info1__img--mobile {
-    width: 8rem;
+
+.spanTitleFont {
+    font-family: mariofont;
+    font-size: 2.5rem;
 }
 
-.info2__img--mobile {
-    width: 10rem;
+.container__carousel {
+    width: 220px;
 }
 
-.info1__img--desktop, .info2__img--desktop {
-    display: none;
+.container__carousel--2 {
+    transform: rotatey(180deg) ;
 }
+
 
 .info--flex {
     display: flex;
@@ -300,7 +308,7 @@ ul li {
     background-repeat: no-repeat;
     background-size:cover;
     border-radius: 0px 30px 0px 30px;
-  
+    box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.379);
 }
 
 .parallax__container {
@@ -403,10 +411,21 @@ ul li {
 
 /* MULTIMEDIA */
 
-.containerMusic--mobile, .containerVids {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.imgGallery {
+    margin: 5px 0;
+}
+
+.imgGallery--spoti {
+    margin: 5px 0
+}
+
+.spotiFrame {
+    width: 100%;
+}
+
+.spotiFrame--small {
+    width: 100%;
+    height: 300px;
 }
 
 .containerWallpapers img {
@@ -418,26 +437,13 @@ ul li {
 .containerWallpapers img:hover {
     transform: scale(1.01) rotate(2deg);
     z-index: 1;
-} 
-.containerVids p{
-    margin-bottom: 1rem;
 }
 
-.spotiContainer {}
-
-
-.containerVids iframe {
-    width: 270px;
-    height: 151px;
+.containerMedia {
+    background-color: rgba(249, 146, 11, 0.214);
+    box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.379);
 }
 
-.containerMusic--mobile iframe {
-    width: 100%;
-}
-
-.titleImg--desktop {
-    display: none;
-}
 
 /* CONTACTO */
 
@@ -449,23 +455,10 @@ ul li {
     margin-left: 1rem;
 }
 
-.spotiContainer {
-    width: 100%;
-    max-width: 569px;
-}
-
-.spotiFrame {
-    width: 100%;
-}
-
-.imgGallery {
-    margin: 5px 0;
-}
 
 /* MEDIA QUERIES */
 /* TABLET */
 @media screen and (min-width: 500px) {
-
     .container--plain{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -521,8 +514,6 @@ ul li {
     }
     
     /*  */
-
-
 
     .headerMain__container--pages {
         background: linear-gradient(0deg, rgba(77,152,28,1) 0%, rgba(77,133,38,1) 6%, rgba(176,237,157,1) 71%, rgba(89,164,34,1) 94%, rgba(103,138,80,1) 100%);
@@ -716,6 +707,7 @@ ul li {
 
     /* INFO */
 
+
     .parrallax--w3, .parrallax--w4, .info1__img--desktop, .info2__img--desktop {
         display: block;
     }
@@ -750,64 +742,6 @@ ul li {
 
     /* MULTIMEDIA */
 
-    .containerWallpapers__gallery {
-        display: grid;
-        grid-template-columns: 0.8fr 0.8fr 0.8fr 1.6fr;
-        grid-template-rows: 1.5fr 1fr 0.5fr;
-        grid-template-areas: 
-        "foto1 foto1 foto1 foto2"
-        "foto3 foto3 foto4 foto4"
-        "foto5 foto6 foto4 foto4"
-        ; 
-    }
-
-    .multimedia__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .galeria1 {
-        grid-area: foto1;
-    }
-    
-    .galeria2 {
-        grid-area: foto2;
-    }
-    
-    .galeria3 {
-        grid-area: foto3;
-    }
-    
-    .galeria4 {
-        grid-area: foto4;
-    }
-    
-    .galeria5 {
-        grid-area: foto5;
-    }
-    
-    .galeria6 {
-        grid-area: foto6;
-    }
-
-
-    .containerVids__gallery {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .containerVids iframe {
-        width: 270px;
-        height: 151px;
-    }
-
-    .titleImg--desktop {
-        display: inline;
-    }
 
     /* FOOTER */
     .footerImg {
@@ -841,8 +775,6 @@ ul li {
     .btn-lg {
         font-size: 1.6rem;
     }
-
-
 
 }
 
@@ -960,9 +892,6 @@ ul li {
         91% {opacity: 0;}
      }
    
-
-
-
     .mainImg__bloque {
         width: 53px;
         align-self: flex-end;
@@ -1011,14 +940,6 @@ ul li {
 
     /* MULTIMEDIA */
 
-    .containerMusic--mobile {
-        display: none;
-    }
-    
-    .containerVids iframe{
-        width: 500px; 
-        height: 281px;
-    }
 
     /* CONTACTO */
 

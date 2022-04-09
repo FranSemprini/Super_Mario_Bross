@@ -61,20 +61,16 @@
             </div>
         </header>
 
-
-
-
         <div class="mainContent webMargins">
             <main class="pageTitle webMargins centeredText">
                 <h1>Multimedia</h1>
                 <h4>Imagenes y videos de nuestros heroes y enemigos favoritos!</h4>
             </main>
-
             <section class="containerWallpapers">
                 <h3 class="pageSubtitle centeredText">Imagenes<span class="titleImg--desktop"> y musica</span> de mario
                     y sus amigos.</h3>
                 <div class="conainer">
-                    <div class="row">
+                    <div class="row containerMedia rounded">
                         <div class="col-lg-4 col-md-12">
                             <img src="../img/wallpapers/wall1.jpg" class="w-100 shadow-1-strong rounded imgGallery"
                                 alt="Boat on Calm Water" />
@@ -84,38 +80,60 @@
                         <div class="col-lg-4 col-md-12">
                             <img src="../img/wallpapers/wall5.jpg" class="w-100 shadow-1-strong rounded imgGallery"
                                 alt="Boat on Calm Water" />
-
                             <img src="../img/wallpapers/wall4.jpg" class="w-100 shadow-1-strong rounded imgGallery"
                                 alt="Waves at Sea" />
                         </div>
-
                         <div class="col-lg-4 col-md-12 d-flex flex-fill">
-
-                            <iframe class="spotiFrame imgGallery"
-                            src="https://open.spotify.com/embed/album/7qYXqqaDYjN5SSDASCf7FF"
-                            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-                            <!-- <img src="../img/wallpapers/wall3.jpg" class="w-100 shadow-1-strong rounded mb-4"
-                                alt="Boat on Calm Water" />
-
-                            <img src="../img/wallpapers/wall4.jpg" class="w-100 shadow-1-strong rounded mb-4"
-                                alt="Waves at Sea" /> -->
+                            <iframe class="imgGallery--spoti d-md-block d-lg-none spotiFrame--small rounded"
+                                src="https://open.spotify.com/embed/album/7qYXqqaDYjN5SSDASCf7FF" frameborder="0"
+                                allowtransparency="true" allow="encrypted-media"></iframe>
+                            <iframe class="spotiFrame imgGallery--spoti d-none d-lg-block rounded"
+                                src="https://open.spotify.com/embed/album/7qYXqqaDYjN5SSDASCf7FF" frameborder="0"
+                                allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>
                     </div>
                 </div>
             </section>
 
-
-
-
-
-
-
-
-
-
-
+            <!--VIDEOS (IFRAME)-->
+            <section class="containerVids">
+                <h3 class="pageSubtitle centeredText">Videos de los juegos</h3>
+                <div class="containerVids__gallery centeredText">
+                    <div class="container-fluid">
+                        <div class="row containerMedia rounded ">
+                            <div class="col-md-12 col-lg-4 mt-3">
+                                <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/rLl9XBg7wSs?start=8" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen class="rounded"></iframe>
+                            </div>
+                            <p>Super Mario Bross Original</p>
+                        </div>
+                            <div class="col-md-12 col-lg-4 mt-3">
+                                <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/5yOQVYyEFDs?start=8" 
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen class="rounded"></iframe>
+                                </div>
+                                <p>Super Mario Bross Wii</p>
+                            </div>
+                            <div class="col-md-12 col-lg-4 mt-3">
+                                <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/1uetntyZ5fA?start=8"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen class="rounded"></iframe>
+                                </div>
+                                <p>Super Mario Bross U</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
+
         <!--FOOTER-->
         <footer class="footerMain">
             <img class="footerImg" src="../img/mfooter.png" alt="Mario">
