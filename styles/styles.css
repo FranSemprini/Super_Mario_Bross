@@ -7,7 +7,8 @@ html {
     font-size: 62.5%;
 }
 
-html, body {
+html,
+body {
     /* Bottom footer */
     height: 100%;
     width: 100%;
@@ -25,7 +26,9 @@ html, body {
     src: url(../fonts/pressstart.ttf);
 }
 
-dl, ol, ul {
+dl,
+ol,
+ul {
     padding: 0;
     margin: 0;
 }
@@ -87,15 +90,6 @@ ul li {
     list-style-type: none;
 }
 
-.spinAnim {
-    transition: transform 1s;
-}
-
-.spinAnim:hover {
-    transform: rotateY(360deg);
-}
-
-
 /* NAVBAR */
 
 .navbar--sticky {
@@ -110,13 +104,14 @@ ul li {
 .headerMain {
     grid-area: header;
     width: 100%;
-    background: linear-gradient(0deg, rgba(77,152,28,1) 0%, rgba(77,133,38,1) 6%, rgba(176,237,157,1) 71%, rgba(89,164,34,1) 94%, rgba(103,138,80,1) 100%);
-    box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
-    z-index: 999;
+    background: linear-gradient(0deg, rgba(77, 152, 28, 1) 0%, rgba(77, 133, 38, 1) 6%, rgba(176, 237, 157, 1) 71%, rgba(89, 164, 34, 1) 94%, rgba(103, 138, 80, 1) 100%);
+    box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
+    z-index: 998;
 }
 
 @keyframes slide {
-    100% {transform: translatex(105%);
+    100% {
+        transform: translatex(105%);
     }
 }
 
@@ -132,7 +127,7 @@ ul li {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
+
 }
 
 .nav-plain ul li {
@@ -142,7 +137,7 @@ ul li {
     color: black;
 }
 
-.container__navBar ul li a{
+.container__navBar ul li a {
     color: black;
 }
 
@@ -150,7 +145,7 @@ ul li {
     width: 8rem;
     height: auto;
     margin: 0.5rem 0 0.5rem 0;
-    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.55);
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.55);
 }
 
 .centeredFlex {
@@ -161,10 +156,10 @@ ul li {
 .container--plain {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer"
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
     ;
     justify-items: center;
     /* Bottom footer */
@@ -172,6 +167,7 @@ ul li {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
 }
+
 
 /* INDEX */
 
@@ -190,10 +186,10 @@ ul li {
     background-size: 500px 320px;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: 
-    "mario . luigi"
+    grid-template-areas:
+        "mario . luigi"
     ;
-    box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
+    box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
     overflow: hidden;
 }
 
@@ -205,7 +201,7 @@ ul li {
     grid-area: mario;
     width: 150px;
     height: auto;
-    transition: transform 2s; 
+    transition: transform 2s;
 }
 
 .mainImg__marioMain:hover {
@@ -229,15 +225,15 @@ ul li {
     grid-area: footer;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: 
-    "logo footerMain__socialCopy ."
+    grid-template-areas:
+        "logo footerMain__socialCopy ."
     ;
     background: red;
     width: 100%;
-    box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
+    box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
     align-items: center;
     padding: 0.3rem;
-} 
+}
 
 .footerImg {
     width: 4.5rem;
@@ -245,21 +241,22 @@ ul li {
     margin-left: 1rem;
 }
 
-.footerMain__socialCopy p, .footerMain__socialCopy__socialNetworls{
+.footerMain__socialCopy p,
+.footerMain__socialCopy__socialNetworls {
     font-size: 1.1rem;
     color: white;
 }
 
-.footerMain__socialCopy__socialNetworls a{
+.footerMain__socialCopy__socialNetworls a {
     color: white;
     transition: color 0.5s;
 }
 
-.footerMain__socialCopy__socialNetworls a:hover{
+.footerMain__socialCopy__socialNetworls a:hover {
     color: blue;
 }
 
-.socialCopy__copyright p{
+.socialCopy__copyright p {
     font-size: 0.6rem;
     color: white;
 }
@@ -272,11 +269,11 @@ ul li {
 }
 
 .container__carousel {
-    width: 220px;
+    width: 230px;
 }
 
 .container__carousel--2 {
-    transform: rotatey(180deg) ;
+    transform: rotatey(180deg);
 }
 
 .info--flex {
@@ -301,7 +298,7 @@ ul li {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     border-radius: 0px 30px 0px 30px;
     box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.379);
 }
@@ -311,10 +308,10 @@ ul li {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
     gap: 0.4rem;
-    grid-template-areas: 
-    "v1"
-    "v2"
-    ; 
+    grid-template-areas:
+        "v1"
+        "v2"
+    ;
 }
 
 .parrallax--w1 {
@@ -333,8 +330,8 @@ ul li {
     grid-area: v4;
 }
 
-.parallax--img1{
- background-image: url("../img/mobile/parallax1.jpg");
+.parallax--img1 {
+    background-image: url("../img/mobile/parallax1.jpg");
 }
 
 /* CARD SECTION */
@@ -363,40 +360,41 @@ ul li {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.55);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.55);
     border-radius: 50px;
 }
 
 .flipCard:hover .flipCard__inner {
     transform: rotateY(180deg);
-  }
+}
 
-.flipCard__front, .flipCard__back {
+.flipCard__front,
+.flipCard__back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-  }
+}
 
 .flipCard__back {
-    background: linear-gradient(0deg, rgba(255,255,255,1) 18%, rgba(232,161,8,1) 100%);    color: white;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 18%, rgba(232, 161, 8, 1) 100%);
+    color: white;
     transform: rotateY(180deg);
     border-radius: 50px;
-  }
+}
 
-.flipCard__back h1{
+.flipCard__back h1 {
     font-size: 3rem;
     font-family: mariofont;
     color: black;
     margin: 1rem;
-  }
+}
 
 .flipCard__back p {
-    font-size: 2rem;
     color: black;
     margin: 0 1rem;
-  }
+}
 
 .flipCard__front img {
     width: 25rem;
@@ -430,7 +428,7 @@ ul li {
 }
 
 .containerWallpapers img:hover {
-    transform: scale(1.01) rotate(2deg);
+    transform: scale(1.015);
     z-index: 1;
 }
 
@@ -445,23 +443,32 @@ ul li {
     max-width: 80%;
 }
 
-.form-floating > label {
+.form-floating>label {
     margin-left: 1rem;
 }
+
+.spinAnim {
+    transition: transform 1s;
+}
+
+.spinAnim:hover {
+    transform: rotateY(360deg);
+}
+
 
 /* MEDIA QUERIES */
 /* TABLET */
 @media screen and (min-width: 500px) {
-    .container--plain{
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer"
-    ;
+    .container--plain {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "footer footer footer"
+        ;
     }
 
-    .pageTitle h1{
+    .pageTitle h1 {
         font-size: 5rem;
     }
 
@@ -485,39 +492,45 @@ ul li {
         flex-wrap: nowrap;
         justify-content: flex-start;
     }
+
     .navbar-expand-custom .navbar-nav {
         flex-direction: row;
     }
+
     .navbar-expand-custom .dropdown-menu {
         position: absolute;
     }
+
     .navbar-expand-custom .nav-link {
         padding-right: .5rem;
         padding-left: .5rem;
     }
-    .navbar-expand-custom > .container {
+
+    .navbar-expand-custom>.container {
         flex-wrap: nowrap;
     }
+
     .navbar-expand-custom .navbar-collapse {
-        display: flex!important;
+        display: flex !important;
         flex-basis: auto;
     }
+
     .navbar-expand-custom .navbar-toggler {
         display: none;
     }
-    
+
     /*  */
 
     .headerMain__container--pages {
-        background: linear-gradient(0deg, rgba(77,152,28,1) 0%, rgba(77,133,38,1) 6%, rgba(176,237,157,1) 71%, rgba(89,164,34,1) 94%, rgba(103,138,80,1) 100%);
-        box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
+        background: linear-gradient(0deg, rgba(77, 152, 28, 1) 0%, rgba(77, 133, 38, 1) 6%, rgba(176, 237, 157, 1) 71%, rgba(89, 164, 34, 1) 94%, rgba(103, 138, 80, 1) 100%);
+        box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
         position: relative;
         animation-name: slide;
         animation-duration: 1s;
         right: 105%;
         animation-fill-mode: forwards;
     }
-    
+
     .navLogo {
         width: 110px;
     }
@@ -552,7 +565,7 @@ ul li {
         position: absolute;
         transition: all 0.5s;
         top: -1rem;
-     }
+    }
 
     .navBar__containerWCoin {
         display: flex;
@@ -562,7 +575,7 @@ ul li {
         padding: 0.5rem 0;
     }
 
-    .navBar__containerWCoin:hover .navBar__coin--desktop  {
+    .navBar__containerWCoin:hover .navBar__coin--desktop {
         visibility: visible;
         opacity: 1;
         transform: translatey(-15px) rotateY(180deg);
@@ -571,12 +584,13 @@ ul li {
     .headerMain--sticky {
         position: sticky;
         top: 0;
+        z-index: 998;
     }
 
     /* INDEX */
     .mainContent__mainImg--desktop {
         background-image: url("../img/desktop/portada.jpg");
-        background-position: bottom ;
+        background-position: bottom;
         background-repeat: no-repeat;
         background-size: 1200px auto;
         width: 100%;
@@ -584,34 +598,35 @@ ul li {
         position: relative;
         display: grid;
         grid-template-rows: repeat(9, 47px);
-        grid-template-areas: 
-        ". . . . ."
-        "nube1 nube1 nube1 . ."
-        ". . nube2 nube2 nube2"
-        "mario . . . luigi"
-        "mario . hongo . luigi"
-        "mario . bloque . luigi"
-        "mario . minimario . luigi"
-        "mario . . . luigi"
-        "mario . . . luigi"
+        grid-template-areas:
+            ". . . . ."
+            "nube1 nube1 nube1 . ."
+            ". . nube2 nube2 nube2"
+            "mario . . . luigi"
+            "mario . hongo . luigi"
+            "mario . bloque . luigi"
+            "mario . minimario . luigi"
+            "mario . . . luigi"
+            "mario . . . luigi"
         ;
-        box-shadow: 0px -2px 17px 5px rgba(0,0,0,0.71);
+        box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
         overflow: hidden;
         align-content: space-between;
-        }
+    }
 
     .mainContent__mainImg--mobile {
         display: none;
-        }
+    }
 
-    .mainImg__nube1, .mainImg__nube2 {
+    .mainImg__nube1,
+    .mainImg__nube2 {
         grid-area: nube1;
         justify-self: center;
         width: 80px;
         height: auto;
         animation-name: nube1;
         animation-iteration-count: infinite;
-        animation-timing-function: linear;  
+        animation-timing-function: linear;
         animation-duration: 10s;
         animation-delay: 0ms;
         z-index: 0;
@@ -622,21 +637,49 @@ ul li {
         width: 100px;
         animation-name: nube2;
     }
-    
+
     @keyframes nube1 {
-        0% {transform: translate(0px, 0px)}
-        25% {transform: translate(-4px, -4px)}
-        50% {transform: translate(4px, 4px)}
-        75% {transform: translate(-8px, -8px)}
-        100% {transform: translate(0px, 0px)}
+        0% {
+            transform: translate(0px, 0px)
+        }
+
+        25% {
+            transform: translate(-4px, -4px)
+        }
+
+        50% {
+            transform: translate(4px, 4px)
+        }
+
+        75% {
+            transform: translate(-8px, -8px)
+        }
+
+        100% {
+            transform: translate(0px, 0px)
+        }
     }
 
     @keyframes nube2 {
-        0% {transform: translate(0px, 0px)}
-        25% {transform: translate(5px, 5px)}
-        50% {transform: translate(2px, 2px)}
-        75% {transform: translate(-3px, -3px)}
-        100% {transform: translate(0px, 0px)}
+        0% {
+            transform: translate(0px, 0px)
+        }
+
+        25% {
+            transform: translate(5px, 5px)
+        }
+
+        50% {
+            transform: translate(2px, 2px)
+        }
+
+        75% {
+            transform: translate(-3px, -3px)
+        }
+
+        100% {
+            transform: translate(0px, 0px)
+        }
     }
 
     .mainImg__bloque {
@@ -664,12 +707,30 @@ ul li {
     }
 
     @keyframes animhongo {
-        1% {opacity: 1;}
-        10% {transform: translatey(-31px);}
-        15% {transform: translate(20px, -32px);}
-        30% {transform: translate(100px, 104px);}
-        90% {transform: translate(800px, 104px); opacity: 1;}
-        91% {opacity: 0;}
+        1% {
+            opacity: 1;
+        }
+
+        10% {
+            transform: translatey(-31px);
+        }
+
+        15% {
+            transform: translate(20px, -32px);
+        }
+
+        30% {
+            transform: translate(100px, 104px);
+        }
+
+        90% {
+            transform: translate(800px, 104px);
+            opacity: 1;
+        }
+
+        91% {
+            opacity: 0;
+        }
     }
 
     .mainImg__miniMarioMain {
@@ -684,10 +745,15 @@ ul li {
     }
 
     @keyframes minimario {
-        100% {transform: translatey(-27px)};
+        100% {
+            transform: translatey(-27px)
+        }
+
+        ;
     }
 
-    .mainImg__marioMain, .mainImg__luigiMain{
+    .mainImg__marioMain,
+    .mainImg__luigiMain {
         justify-self: flex-start;
         align-self: flex-end;
         width: 220px;
@@ -700,7 +766,10 @@ ul li {
 
     /* INFO */
 
-    .parrallax--w3, .parrallax--w4, .info1__img--desktop, .info2__img--desktop {
+    .parrallax--w3,
+    .parrallax--w4,
+    .info1__img--desktop,
+    .info2__img--desktop {
         display: block;
     }
 
@@ -714,9 +783,10 @@ ul li {
         float: right;
     }
 
-    .info1__img--mobile, .info2__img--mobile {
+    .info1__img--mobile,
+    .info2__img--mobile {
         display: none;
-    }  
+    }
 
     .scoreTable {
         font-size: 1.5rem;
@@ -725,10 +795,10 @@ ul li {
     .parallax__container {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 0.4rem;
-        grid-template-areas: 
-        "v1 v1 v2"
-        "v3 v4 v4"
-        ; 
+        grid-template-areas:
+            "v1 v1 v2"
+            "v3 v4 v4"
+        ;
         margin-top: 1rem;
     }
 
@@ -739,11 +809,13 @@ ul li {
     .footerImg {
         width: 6rem;
     }
-    
-    .footerMain__socialCopy p, .footerMain__socialCopy__socialNetworls, .socialCopy__copyright p{
+
+    .footerMain__socialCopy p,
+    .footerMain__socialCopy__socialNetworls,
+    .socialCopy__copyright p {
         font-size: 1.5rem;
     }
-    
+
     .socialCopy__copyright p {
         font-size: 1rem;
     }
@@ -753,9 +825,9 @@ ul li {
     .textArea {
         height: 70px;
         font-size: 1.6rem;
-      }
+    }
 
-    .form-floating > label {
+    .form-floating>label {
         font-size: 1.4rem;
         margin-left: 1rem;
     }
@@ -768,17 +840,17 @@ ul li {
 
 /* DESKTOP */
 @media screen and (min-width: 1200px) {
-    .container--plain{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "header header header header header"
-    "main main main main main"
-    "footer footer footer footer footer"
-    ;
+    .container--plain {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "header header header header header"
+            "main main main main main"
+            "footer footer footer footer footer"
+        ;
     }
 
-    .pageTitle h1{
+    .pageTitle h1 {
         font-size: 7rem;
     }
 
@@ -805,7 +877,7 @@ ul li {
         width: 2.7rem;
     }
 
-     /* INDEX */
+    /* INDEX */
     .mainContent__mainImg--mobile {
         display: none;
     }
@@ -813,18 +885,18 @@ ul li {
     .mainContent__mainImg--desktop {
         background-size: 2000px auto;
         grid-template-rows: repeat(9, 85px);
-        grid-template-areas: 
-        ". . . . ."
-        "nube1 nube1 nube1 . ."
-        ". . nube2 nube2 nube2"
-        "mario . . . luigi"
-        "mario . hongo . luigi"
-        "mario . bloque . luigi"
-        "mario . minimario . luigi"
-        "mario . minimario . luigi"
-        "mario . . . luigi"
+        grid-template-areas:
+            ". . . . ."
+            "nube1 nube1 nube1 . ."
+            ". . nube2 nube2 nube2"
+            "mario . . . luigi"
+            "mario . hongo . luigi"
+            "mario . bloque . luigi"
+            "mario . minimario . luigi"
+            "mario . minimario . luigi"
+            "mario . . . luigi"
         ;
-        }
+    }
 
     .navBar__coin--desktop {
         font-size: 3rem;
@@ -860,7 +932,11 @@ ul li {
     }
 
     @keyframes minimario {
-        100% {transform: translatey(-57px)};
+        100% {
+            transform: translatey(-57px)
+        }
+
+        ;
     }
 
     .mainImg__hongo {
@@ -871,21 +947,40 @@ ul li {
         animation-duration: 8s;
     }
 
-     @keyframes animhongo {
-        1% {opacity: 1;}
-        10% {transform: translatey(-50px);}
-        15% {transform: translate(40px, -50px);}
-        30% {transform: translate(150px, 170px);}
-        90% {transform: translate(1400px, 170px); opacity: 1;}
-        91% {opacity: 0;}
-     }
-   
+    @keyframes animhongo {
+        1% {
+            opacity: 1;
+        }
+
+        10% {
+            transform: translatey(-50px);
+        }
+
+        15% {
+            transform: translate(40px, -50px);
+        }
+
+        30% {
+            transform: translate(150px, 170px);
+        }
+
+        90% {
+            transform: translate(1400px, 170px);
+            opacity: 1;
+        }
+
+        91% {
+            opacity: 0;
+        }
+    }
+
     .mainImg__bloque {
         width: 53px;
         align-self: flex-end;
     }
 
-    .mainImg__marioMain, .mainImg__luigiMain {
+    .mainImg__marioMain,
+    .mainImg__luigiMain {
         width: 470px;
     }
 
@@ -900,7 +995,8 @@ ul li {
     }
 
     /* CARDS */
-    .flipCard, .flipCard__front img {
+    .flipCard,
+    .flipCard__front img {
         width: 30rem;
         height: 40rem;
     }
@@ -909,11 +1005,13 @@ ul li {
     .footerImg {
         width: 7rem;
     }
-    
-    .footerMain__socialCopy p, .footerMain__socialCopy__socialNetworls, .socialCopy__copyright p{
+
+    .footerMain__socialCopy p,
+    .footerMain__socialCopy__socialNetworls,
+    .socialCopy__copyright p {
         font-size: 2rem;
     }
-    
+
     .socialCopy__copyright p {
         font-size: 1.2rem;
     }
@@ -926,7 +1024,6 @@ ul li {
     .textArea {
         height: 100px;
         font-size: 1.8rem;
-      }
+    }
 
 }
-

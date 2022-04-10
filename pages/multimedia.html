@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <!-- JQUery para modal-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Tributo a Super Mario Mario Bros</title>
 </head>
 
@@ -71,16 +73,16 @@
                 <div class="conainer">
                     <div class="row containerMedia rounded">
                         <div class="col-lg-4 col-md-12">
-                            <img src="../img/wallpapers/wall1.jpg" class="w-100 shadow-1-strong rounded imgGallery"
-                                alt="Mario y amigos" />
-                            <img src="../img/wallpapers/wall2.webp" class="w-100 shadow-1-strong rounded imgGallery"
-                                alt="Mario Rojo" />
+                            <a href="#" class="pop"><img src="../img/wallpapers/wall1.jpg"
+                                    class="w-100 shadow-1-strong rounded imgGallery" alt="Mario y amigos" /></a>
+                            <a href="#" class="pop"><img src="../img/wallpapers/wall2.webp"
+                                    class="w-100 shadow-1-strong rounded imgGallery" alt="Mario Rojo" /></a>
                         </div>
                         <div class="col-lg-4 col-md-12">
-                            <img src="../img/wallpapers/wall5.jpg" class="w-100 shadow-1-strong rounded imgGallery"
-                                alt="Super mario 2 Amarillo" />
-                            <img src="../img/wallpapers/wall4.jpg" class="w-100 shadow-1-strong rounded imgGallery"
-                                alt="Mario solo simple" />
+                            <a href="#" class="pop"><img src="../img/wallpapers/wall5.jpg"
+                                    class="w-100 shadow-1-strong rounded imgGallery" alt="Super mario 2 Amarillo" /></a>
+                            <a href="#" class="pop"><img src="../img/wallpapers/wall4.jpg"
+                                    class="w-100 shadow-1-strong rounded imgGallery" alt="Mario solo simple" /></a>
                         </div>
                         <div class="col-lg-4 col-md-12 d-flex flex-fill">
                             <iframe class="imgGallery--spoti d-md-block d-lg-none spotiFrame--small rounded"
@@ -91,8 +93,22 @@
                                 allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>
                     </div>
-                </div>
+                    <!-- MODAL -->
+                    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img src="" class="imagepreview img-fluid">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </section>
+
             <!--VIDEOS (IFRAME)-->
             <section class="containerVids">
                 <h3 class="pageSubtitle centeredText">Videos de los juegos</h3>
@@ -146,7 +162,18 @@
                 </div>
             </div>
         </footer>
+
         <script src="../js/bootstrap.js"></script>
+        <!-- JQuery para modal-->
+        <script>
+            $(function () {
+                $('.pop').on('click', function () {
+                    $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+                    $('#imagemodal').modal('show');
+                });
+            });
+        </script>
+
 </body>
 
 </html>
