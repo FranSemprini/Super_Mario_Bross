@@ -92,11 +92,6 @@ ul li {
 
 /* NAVBAR */
 
-.navbar--sticky {
-    position: sticky;
-    top: 0;
-}
-
 .navBar__coin--desktop {
     display: none;
 }
@@ -115,24 +110,9 @@ ul li {
     }
 }
 
-.nav-plain {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.nav-plain ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-
 .nav-plain ul li {
     font-size: 0.8rem;
-    margin: 0.5rem 0.5rem;
+    margin: 0.5rem 1.5rem;
     font-family: pressStart;
     color: black;
 }
@@ -542,25 +522,18 @@ ul li {
         content: "";
         width: 33px;
         height: 95px;
-        top: -9px;
         right: 0;
         border-radius: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+
     }
 
     .navLogo {
         width: 110px;
     }
 
-    .nav-plain {
-        justify-content: flex-end;
-    }
-
-    .nav-plain--index {
-        justify-content: center;
-    }
-
     .nav-plain ul li {
-        margin: 0 1rem;
         font-size: 1.2rem;
     }
 
@@ -884,7 +857,6 @@ ul li {
 
     /* NAVBAR */
     .nav-plain ul li {
-        margin: 0 1rem;
         font-size: 1.6rem;
     }
 
@@ -896,8 +868,6 @@ ul li {
     .headerMain__container--pages::before {
         width: 40px;
         height: 120px;
-        border-radius: 3px;
-        top:-10px
     }
 
     /* INDEX */
