@@ -439,6 +439,23 @@ ul li {
     transform: rotateY(360deg);
 }
 
+.formButton {
+    background-color: green;
+    border-color: greenyellow;
+    transition: background-color .5s;
+}
+
+.formButton:hover {
+    background-color: red;
+}
+
+.concactForm input, .concactForm textarea {
+    transition: background-color .5s;
+}
+
+.concactForm input:focus, .concactForm textarea:focus {
+    background-color: rgb(218, 255, 206);
+}
 
 /* MEDIA QUERIES */
 /* TABLET */
