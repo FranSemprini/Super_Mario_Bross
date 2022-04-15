@@ -63,3 +63,36 @@
         background-image: url("../img/mobile/parallax1.jpg");
     }
 }
+
+
+@media screen and (min-width: 500px) {
+
+    .parallax__container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.4rem;
+        grid-template-areas:
+            "v1 v1 v2"
+            "v3 v4 v4"
+        ;
+        margin-top: 1rem;
+
+        .parrallax--w3,
+        .parrallax--w4 {
+            display: block;
+        }
+    }
+
+    .info {
+        .scoreTable {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .info {
+        .scoreTable {
+            font-size: 1.7rem;
+        }
+    }
+}

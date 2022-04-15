@@ -35,3 +35,30 @@
         }
     }
 }
+
+@media screen and (min-width: 500px) {
+    .contact__container {
+        .textArea {
+            height: 70px;
+            font-size: 1.6rem;
+        }
+
+        .form-floating>label {
+            font-size: 1.4rem;
+            margin-left: 1rem;
+        }
+
+        .btn-lg {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contact__container {
+        .textArea {
+            height: 100px;
+            font-size: 1.8rem;
+        }
+    }
+}

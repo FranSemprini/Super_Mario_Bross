@@ -1,7 +1,7 @@
-.mainContent__mainImg--desktop {
+.mainContent .mainContent__mainImg--desktop {
   display: none; }
 
-.mainContent__mainImg--mobile {
+.mainContent .mainContent__mainImg--mobile {
   background-image: url("../img/mobile/mainImgMobile.png");
   width: 100%;
   height: auto;
@@ -13,14 +13,168 @@
   grid-template-areas: "mario . luigi";
   box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
   overflow: hidden; }
-  .mainContent__mainImg--mobile .mainImg__marioMain,
-  .mainContent__mainImg--mobile .mainImg__luigiMain {
-    grid-area: mario;
-    width: 150px;
+
+.mainContent .mainImg__marioMain,
+.mainContent .mainImg__luigiMain {
+  grid-area: mario;
+  width: 150px;
+  height: auto;
+  transition: transform 2s; }
+
+.mainContent .mainImg__luigiMain {
+  grid-area: luigi; }
+
+@media screen and (min-width: 500px) {
+  .mainContent .mainContent__mainImg--mobile {
+    display: none; }
+  .mainContent .mainContent__mainImg--desktop {
+    background-image: url("../img/desktop/portada.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 1200px auto;
+    width: 100%;
     height: auto;
-    transition: transform 2s; }
-  .mainContent__mainImg--mobile .mainImg__luigiMain {
-    grid-area: luigi; }
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(9, 47px);
+    grid-template-areas: ". . . . ." "nube1 nube1 nube1 . ." ". . nube2 nube2 nube2" "mario . . . luigi" "mario . hongo . luigi" "mario . bloque . luigi" "mario . minimario . luigi" "mario . . . luigi" "mario . . . luigi";
+    box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
+    overflow: hidden;
+    align-content: space-between; }
+    .mainContent .mainContent__mainImg--desktop .mainImg__marioMain,
+    .mainContent .mainContent__mainImg--desktop .mainImg__luigiMain {
+      justify-self: flex-start;
+      align-self: flex-end;
+      width: 220px;
+      z-index: 900; }
+    .mainContent .mainContent__mainImg--desktop .mainImg__luigiMain {
+      justify-self: flex-end; }
+    .mainContent .mainContent__mainImg--desktop .mainImg__nube1,
+    .mainContent .mainContent__mainImg--desktop .mainImg__nube2 {
+      grid-area: nube1;
+      justify-self: center;
+      width: 80px;
+      height: auto;
+      animation-name: nube1;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-duration: 10s;
+      animation-delay: 0ms;
+      z-index: 0; }
+    .mainContent .mainContent__mainImg--desktop .mainImg__nube2 {
+      grid-area: nube2;
+      width: 100px;
+      animation-name: nube2; }
+  @keyframes nube1 {
+    0% {
+      transform: translate(0px, 0px); }
+    25% {
+      transform: translate(-4px, -4px); }
+    50% {
+      transform: translate(4px, 4px); }
+    75% {
+      transform: translate(-8px, -8px); }
+    100% {
+      transform: translate(0px, 0px); } }
+  @keyframes nube2 {
+    0% {
+      transform: translate(0px, 0px); }
+    25% {
+      transform: translate(5px, 5px); }
+    50% {
+      transform: translate(2px, 2px); }
+    75% {
+      transform: translate(-3px, -3px); }
+    100% {
+      transform: translate(0px, 0px); } }
+    .mainContent .mainContent__mainImg--desktop .mainImg__bloque {
+      grid-area: bloque;
+      align-self: flex-start;
+      width: 33px;
+      height: auto;
+      z-index: 2; }
+    .mainContent .mainContent__mainImg--desktop .mainImg__hongo {
+      grid-area: hongo;
+      align-self: flex-end;
+      width: 33px;
+      height: auto;
+      z-index: 2;
+      animation-name: animhongo;
+      animation-duration: 8s;
+      animation-fill-mode: forwards;
+      animation-delay: 2.2s;
+      position: relative;
+      bottom: -31px;
+      opacity: 0;
+      animation-timing-function: linear; }
+  @keyframes animhongo {
+    1% {
+      opacity: 1; }
+    10% {
+      transform: translatey(-31px); }
+    15% {
+      transform: translate(20px, -32px); }
+    30% {
+      transform: translate(100px, 104px); }
+    90% {
+      transform: translate(800px, 104px);
+      opacity: 1; }
+    91% {
+      opacity: 0; } }
+    .mainContent .mainContent__mainImg--desktop .mainImg__miniMarioMain {
+      grid-area: minimario;
+      width: 35px;
+      align-self: flex-end;
+      animation-name: minimario;
+      animation-duration: 0.2s;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+      animation-timing-function: linear; }
+  @keyframes minimario {
+    100% {
+      transform: translatey(-27px); } } }
+
+@media screen and (min-width: 1200px) {
+  .mainContent .mainContent__mainImg--desktop {
+    background-size: 2000px auto;
+    grid-template-rows: repeat(9, 85px);
+    grid-template-areas: ". . . . ." "nube1 nube1 nube1 . ." ". . nube2 nube2 nube2" "mario . . . luigi" "mario . hongo . luigi" "mario . bloque . luigi" "mario . minimario . luigi" "mario . minimario . luigi" "mario . . . luigi"; }
+    .mainContent .mainContent__mainImg--desktop .mainImg__nube1 {
+      width: 160px; }
+    .mainContent .mainContent__mainImg--desktop .mainImg__nube2 {
+      width: 200px; }
+    .mainContent .mainContent__mainImg--desktop .mainImg__miniMarioMain {
+      width: 57px;
+      align-self: center; }
+  @keyframes minimario {
+    100% {
+      transform: translatey(-57px); } }
+    .mainContent .mainContent__mainImg--desktop .mainImg__hongo {
+      width: 50px;
+      height: auto;
+      bottom: -80px;
+      opacity: 0;
+      animation-duration: 8s; }
+  @keyframes animhongo {
+    1% {
+      opacity: 1; }
+    10% {
+      transform: translatey(-50px); }
+    15% {
+      transform: translate(40px, -50px); }
+    30% {
+      transform: translate(150px, 170px); }
+    90% {
+      transform: translate(1400px, 170px);
+      opacity: 1; }
+    91% {
+      opacity: 0; } }
+    .mainContent .mainContent__mainImg--desktop .mainImg__bloque {
+      width: 53px;
+      align-self: flex-end; }
+    .mainContent .mainContent__mainImg--desktop .mainImg__marioMain,
+    .mainContent .mainContent__mainImg--desktop .mainImg__luigiMain {
+      width: 470px; } }
 
 .info {
   display: flex;
@@ -62,6 +216,22 @@
     grid-area: v4; }
   .parallax__container .parallax--img1 {
     background-image: url("../img/mobile/parallax1.jpg"); }
+
+@media screen and (min-width: 500px) {
+  .parallax__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.4rem;
+    grid-template-areas: "v1 v1 v2" "v3 v4 v4";
+    margin-top: 1rem; }
+    .parallax__container .parrallax--w3,
+    .parallax__container .parrallax--w4 {
+      display: block; }
+  .info .scoreTable {
+    font-size: 1.5rem; } }
+
+@media screen and (min-width: 1200px) {
+  .info .scoreTable {
+    font-size: 1.7rem; } }
 
 .cardSection {
   display: flex;
@@ -112,6 +282,14 @@
       height: 33rem;
       border-radius: 50px; }
 
+@media screen and (min-width: 1200px) {
+  .cardSection .flipCard {
+    width: 30rem;
+    height: 40rem; }
+    .cardSection .flipCard .flipCard__front img {
+      width: 30rem;
+      height: 40rem; } }
+
 .containerMedia .imgGallery {
   margin: 5px 0; }
 
@@ -133,6 +311,12 @@
   .containerMedia img:hover {
     transform: scale(1.015);
     z-index: 1; }
+
+@media screen and (min-width: 1200px) {
+  .flipCard,
+  .flipCard__front img {
+    width: 30rem;
+    height: 40rem; } }
 
 .contact__container .contacto__img {
   max-width: 80%; }
@@ -158,6 +342,21 @@
   .contact__container .concactForm input:focus,
   .contact__container .concactForm textarea:focus {
     background-color: #daffce; }
+
+@media screen and (min-width: 500px) {
+  .contact__container .textArea {
+    height: 70px;
+    font-size: 1.6rem; }
+  .contact__container .form-floating > label {
+    font-size: 1.4rem;
+    margin-left: 1rem; }
+  .contact__container .btn-lg {
+    font-size: 1.6rem; } }
+
+@media screen and (min-width: 1200px) {
+  .contact__container .textArea {
+    height: 100px;
+    font-size: 1.8rem; } }
 
 html {
   font-size: 62.5%;
@@ -194,6 +393,12 @@ html {
 
 .hide {
   display: none; }
+
+dl,
+ol,
+ul {
+  padding: 0;
+  margin: 0; }
 
 .container--plain {
   display: grid;
@@ -294,7 +499,32 @@ html {
       box-shadow: none;
       position: absolute;
       z-index: 9999;
-      margin-top: 1.5rem; }
+      margin-top: 1.5rem;
+      /* CUSTOM NAV BREAK POINT */ }
+      .container--plain .headerMain .navLogo {
+        width: 110px; }
+      .container--plain .headerMain .nav-plain ul {
+        margin-right: 2rem; }
+        .container--plain .headerMain .nav-plain ul li {
+          font-size: 1.2rem; }
+      .container--plain .headerMain .navbar-expand-custom {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start; }
+      .container--plain .headerMain .navbar-expand-custom .navbar-nav {
+        flex-direction: row; }
+      .container--plain .headerMain .navbar-expand-custom .dropdown-menu {
+        position: absolute; }
+      .container--plain .headerMain .navbar-expand-custom .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem; }
+      .container--plain .headerMain .navbar-expand-custom > .container {
+        flex-wrap: nowrap; }
+      .container--plain .headerMain .navbar-expand-custom .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto; }
+      .container--plain .headerMain .navbar-expand-custom .navbar-toggler {
+        display: none; }
     .container--plain .headerMain__container--pages {
       background: linear-gradient(0deg, #4d981c 0%, #4d8526 6%, #b0ed9d 71%, #59a422 94%, #678a50 100%);
       box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
@@ -302,8 +532,7 @@ html {
       animation-name: slide;
       animation-duration: 1s;
       right: 105%;
-      animation-fill-mode: forwards;
-      /* CUSTOM NAV BREAK POINT */ }
+      animation-fill-mode: forwards; }
       .container--plain .headerMain__container--pages:before {
         background: linear-gradient(0deg, #4d981c 0%, #4d8526 6%, #b0ed9d 71%, #59a422 94%, #678a50 100%);
         box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
@@ -318,49 +547,25 @@ html {
   @keyframes slide {
     100% {
       transform: translatex(105%); } }
-      .container--plain .headerMain__container--pages .navLogo {
-        width: 110px; }
-      .container--plain .headerMain__container--pages .nav-plain ul {
-        margin-right: 2rem; }
-        .container--plain .headerMain__container--pages .nav-plain ul li {
-          font-size: 1.2rem; }
-      .container--plain .headerMain__container--pages .navBar__containerWCoin {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        position: relative;
-        padding: 0.5rem 0; }
-        .container--plain .headerMain__container--pages .navBar__containerWCoin:hover .navBar__coin--desktop {
-          visibility: visible;
-          opacity: 1;
-          transform: translatey(-15px) rotateY(180deg); }
-        .container--plain .headerMain__container--pages .navBar__containerWCoin .navBar__coin--desktop {
-          display: block;
-          visibility: hidden;
-          opacity: 0;
-          width: 2.2rem;
-          height: auto;
-          position: absolute;
-          transition: all 0.5s;
-          top: -1rem; }
-      .container--plain .headerMain__container--pages .navbar-expand-custom {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start; }
-      .container--plain .headerMain__container--pages .navbar-expand-custom .navbar-nav {
-        flex-direction: row; }
-      .container--plain .headerMain__container--pages .navbar-expand-custom .dropdown-menu {
-        position: absolute; }
-      .container--plain .headerMain__container--pages .navbar-expand-custom .nav-link {
-        padding-right: .5rem;
-        padding-left: .5rem; }
-      .container--plain .headerMain__container--pages .navbar-expand-custom > .container {
-        flex-wrap: nowrap; }
-      .container--plain .headerMain__container--pages .navbar-expand-custom .navbar-collapse {
-        display: flex !important;
-        flex-basis: auto; }
-      .container--plain .headerMain__container--pages .navbar-expand-custom .navbar-toggler {
-        display: none; }
+    .container--plain .navBar__containerWCoin {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      position: relative;
+      padding: 0.5rem 0; }
+      .container--plain .navBar__containerWCoin:hover .navBar__coin--desktop {
+        visibility: visible;
+        opacity: 1;
+        transform: translatey(-15px) rotateY(180deg); }
+      .container--plain .navBar__containerWCoin .navBar__coin--desktop {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        width: 2.2rem;
+        height: auto;
+        position: absolute;
+        transition: all 0.5s;
+        top: -1rem; }
     .container--plain .headerMain--sticky {
       position: sticky;
       top: 0;
@@ -380,3 +585,28 @@ html {
       font-family: 'Fredoka', cursive;
       font-size: 1.9rem;
       margin: 0; } }
+
+@media screen and (min-width: 1200px) {
+  .container--plain {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header header" "main main main main main" "footer footer footer footer footer"; }
+    .container--plain .headerMain .nav-plain ul li {
+      font-size: 1.6rem;
+      margin-right: 2.5rem; }
+    .container--plain .headerMain .navBar__coin--desktop {
+      top: -1.5rem;
+      width: 2.7rem; }
+    .container--plain .headerMain .headerMain__container--pages::before {
+      width: 40px;
+      height: 120px; }
+    .container--plain .headerMain .navLogo {
+      width: 16rem; }
+    .container--plain .mainContent .pageTitle h1 {
+      font-size: 7rem; }
+    .container--plain .mainContent .pageTitle h4 {
+      font-size: 2rem; }
+    .container--plain .mainContent .pageSubtitle {
+      font-size: 4rem; }
+    .container--plain .mainContent p {
+      font-size: 2.1rem; } }

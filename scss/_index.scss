@@ -1,21 +1,23 @@
-.mainContent__mainImg--desktop {
-    display: none;
-}
+.mainContent {
+    .mainContent__mainImg--desktop {
+        display: none;
+    }
 
-.mainContent__mainImg--mobile {
-    background-image: url("../img/mobile/mainImgMobile.png");
-    width: 100%;
-    height: auto;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 500px 320px;
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-areas:
-        "mario . luigi"
-    ;
-    box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
-    overflow: hidden;
+    .mainContent__mainImg--mobile {
+        background-image: url("../img/mobile/mainImgMobile.png");
+        width: 100%;
+        height: auto;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 500px 320px;
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-areas:
+            "mario . luigi"
+        ;
+        box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
+        overflow: hidden;
+    }
 
     .mainImg__marioMain,
     .mainImg__luigiMain {
@@ -27,5 +29,273 @@
 
     .mainImg__luigiMain {
         grid-area: luigi;
+    }
+}
+
+@media screen and (min-width: 500px) {
+
+    .mainContent {
+
+        .mainContent__mainImg--mobile {
+            display: none;
+        }
+
+        .mainContent__mainImg--desktop {
+            background-image: url("../img/desktop/portada.jpg");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 1200px auto;
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: grid;
+            grid-template-rows: repeat(9, 47px);
+            grid-template-areas:
+                ". . . . ."
+                "nube1 nube1 nube1 . ."
+                ". . nube2 nube2 nube2"
+                "mario . . . luigi"
+                "mario . hongo . luigi"
+                "mario . bloque . luigi"
+                "mario . minimario . luigi"
+                "mario . . . luigi"
+                "mario . . . luigi"
+            ;
+            box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
+            overflow: hidden;
+            align-content: space-between;
+
+            .mainImg__marioMain,
+            .mainImg__luigiMain {
+                justify-self: flex-start;
+                align-self: flex-end;
+                width: 220px;
+                z-index: 900;
+            }
+
+            .mainImg__luigiMain {
+                justify-self: flex-end;
+            }
+
+            .mainImg__nube1,
+            .mainImg__nube2 {
+                grid-area: nube1;
+                justify-self: center;
+                width: 80px;
+                height: auto;
+                animation-name: nube1;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-duration: 10s;
+                animation-delay: 0ms;
+                z-index: 0;
+            }
+
+            .mainImg__nube2 {
+                grid-area: nube2;
+                width: 100px;
+                animation-name: nube2;
+            }
+
+            @keyframes nube1 {
+                0% {
+                    transform: translate(0px, 0px)
+                }
+
+                25% {
+                    transform: translate(-4px, -4px)
+                }
+
+                50% {
+                    transform: translate(4px, 4px)
+                }
+
+                75% {
+                    transform: translate(-8px, -8px)
+                }
+
+                100% {
+                    transform: translate(0px, 0px)
+                }
+            }
+
+            @keyframes nube2 {
+                0% {
+                    transform: translate(0px, 0px)
+                }
+
+                25% {
+                    transform: translate(5px, 5px)
+                }
+
+                50% {
+                    transform: translate(2px, 2px)
+                }
+
+                75% {
+                    transform: translate(-3px, -3px)
+                }
+
+                100% {
+                    transform: translate(0px, 0px)
+                }
+            }
+
+            .mainImg__bloque {
+                grid-area: bloque;
+                align-self: flex-start;
+                width: 33px;
+                height: auto;
+                z-index: 2;
+            }
+
+            .mainImg__hongo {
+                grid-area: hongo;
+                align-self: flex-end;
+                width: 33px;
+                height: auto;
+                z-index: 2;
+                animation-name: animhongo;
+                animation-duration: 8s;
+                animation-fill-mode: forwards;
+                animation-delay: 2.2s;
+                position: relative;
+                bottom: -31px;
+                opacity: 0;
+                animation-timing-function: linear;
+            }
+
+            @keyframes animhongo {
+                1% {
+                    opacity: 1;
+                }
+
+                10% {
+                    transform: translatey(-31px);
+                }
+
+                15% {
+                    transform: translate(20px, -32px);
+                }
+
+                30% {
+                    transform: translate(100px, 104px);
+                }
+
+                90% {
+                    transform: translate(800px, 104px);
+                    opacity: 1;
+                }
+
+                91% {
+                    opacity: 0;
+                }
+            }
+
+            .mainImg__miniMarioMain {
+                grid-area: minimario;
+                width: 35px;
+                align-self: flex-end;
+                animation-name: minimario;
+                animation-duration: 0.2s;
+                animation-fill-mode: forwards;
+                animation-delay: 2s;
+                animation-timing-function: linear;
+            }
+
+            @keyframes minimario {
+                100% {
+                    transform: translatey(-27px)
+                }
+
+                ;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .mainContent {
+        .mainContent__mainImg--desktop {
+            background-size: 2000px auto;
+            grid-template-rows: repeat(9, 85px);
+            grid-template-areas:
+                ". . . . ."
+                "nube1 nube1 nube1 . ."
+                ". . nube2 nube2 nube2"
+                "mario . . . luigi"
+                "mario . hongo . luigi"
+                "mario . bloque . luigi"
+                "mario . minimario . luigi"
+                "mario . minimario . luigi"
+                "mario . . . luigi"
+            ;
+
+            .mainImg__nube1 {
+                width: 160px;
+            }
+        
+            .mainImg__nube2 {
+                width: 200px;
+            }
+        
+            .mainImg__miniMarioMain {
+                width: 57px;
+                align-self: center;
+            }
+        
+            @keyframes minimario {
+                100% {
+                    transform: translatey(-57px);
+                }
+            }
+        
+            .mainImg__hongo {
+                width: 50px;
+                height: auto;
+                bottom: -80px;
+                opacity: 0;
+                animation-duration: 8s;
+            }
+        
+            @keyframes animhongo {
+                1% {
+                    opacity: 1;
+                }
+        
+                10% {
+                    transform: translatey(-50px);
+                }
+        
+                15% {
+                    transform: translate(40px, -50px);
+                }
+        
+                30% {
+                    transform: translate(150px, 170px);
+                }
+        
+                90% {
+                    transform: translate(1400px, 170px);
+                    opacity: 1;
+                }
+        
+                91% {
+                    opacity: 0;
+                }
+            }
+        
+            .mainImg__bloque {
+                width: 53px;
+                align-self: flex-end;
+            }
+        
+            .mainImg__marioMain,
+            .mainImg__luigiMain {
+                width: 470px;
+            }
+        
+        }
     }
 }
