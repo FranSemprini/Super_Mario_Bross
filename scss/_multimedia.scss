@@ -1,0 +1,32 @@
+.containerMedia {
+    .imgGallery {
+        margin: 5px 0;
+    }
+
+    .imgGallery--spoti {
+        margin: 5px 0;
+
+    }
+
+    .spotiFrame,
+    .spotiFrame--small {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .spotiFrame--small {
+        height: 300px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        transition: transform .5s ease;
+
+        &:hover {
+            transform: scale(1.015);
+            z-index: 1;
+        }
+
+    }
+}

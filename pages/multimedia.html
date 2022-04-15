@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/44a8db26f4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../styles/stylesVanilla.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
@@ -69,11 +69,10 @@
                 <h1>Multimedia</h1>
                 <h4>Imagenes y videos de nuestros heroes y enemigos favoritos!</h4>
             </main>
-            <section class="containerWallpapers">
-                <h3 class="pageSubtitle centeredText">Imagenes<span class="titleImg--desktop"> y musica</span> de mario
-                    y sus amigos.</h3>
-                <div class="conainer">
-                    <div class="row containerMedia rounded">
+            <section class="containerWallpapers webMargins">
+                <h3 class="pageSubtitle centeredText">Imagenes y musica de Mario y sus amigos.</h3>
+                <div class="conainer containerMedia">
+                    <div class="row containerWShadow roundedv">
                         <div class="col-lg-4 col-md-12">
                             <a href="#" class="pop"><img src="../img/wallpapers/wall1.jpg"
                                     class="w-100 shadow-1-strong rounded imgGallery" alt="Mario y amigos" /></a>
@@ -90,7 +89,7 @@
                             <iframe class="imgGallery--spoti d-md-block d-lg-none spotiFrame--small rounded"
                                 src="https://open.spotify.com/embed/album/7qYXqqaDYjN5SSDASCf7FF" frameborder="0"
                                 allowtransparency="true" allow="encrypted-media"></iframe>
-                            <iframe class="spotiFrame imgGallery--spoti d-none d-lg-block rounded"
+                            <iframe class="spotiFrame d-none d-lg-block rounded"
                                 src="https://open.spotify.com/embed/album/7qYXqqaDYjN5SSDASCf7FF" frameborder="0"
                                 allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>
@@ -117,7 +116,7 @@
                 <h3 class="pageSubtitle centeredText">Videos de los juegos</h3>
                 <div class="containerVids__gallery centeredText">
                     <div class="container-fluid">
-                        <div class="row containerMedia rounded ">
+                        <div class="row containerWShadow rounded ">
                             <div class="col-md-12 col-lg-4 mt-3">
                                 <div class="ratio ratio-16x9">
                                     <iframe src="https://www.youtube.com/embed/rLl9XBg7wSs?start=8"
@@ -152,17 +151,16 @@
         </div>
         <!--FOOTER-->
         <footer class="footerMain">
-            <img class="footerImg" src="../img/mfooter.png" alt="Mario">
+            <div class="footerImg">
+                <img src="../img/mfooter.png" alt="Mario">
+            </div>
+            <div class="footerMain__socialNetworls centeredText">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
             <div class="footerMain__socialCopy centeredText">
-                <p>Encontranos en nuestras redes</p>
-                <div class="footerMain__socialCopy__socialNetworls">
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-square"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <div class="socialCopy__copyright">
-                    <p>Esta pagina fue hecha por Fran con material sacado de internet y propio</p>
-                </div>
+                <p>Esta pagina fue hecha por Fran con material sacado de internet y propio</p>
             </div>
         </footer>
 

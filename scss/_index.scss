@@ -1,0 +1,31 @@
+.mainContent__mainImg--desktop {
+    display: none;
+}
+
+.mainContent__mainImg--mobile {
+    background-image: url("../img/mobile/mainImgMobile.png");
+    width: 100%;
+    height: auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 500px 320px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas:
+        "mario . luigi"
+    ;
+    box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
+    overflow: hidden;
+
+    .mainImg__marioMain,
+    .mainImg__luigiMain {
+        grid-area: mario;
+        width: 150px;
+        height: auto;
+        transition: transform 2s;
+    }
+
+    .mainImg__luigiMain {
+        grid-area: luigi;
+    }
+}
