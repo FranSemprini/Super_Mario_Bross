@@ -408,7 +408,8 @@ ul {
     background: linear-gradient(0deg, #4d981c 0%, #4d8526 6%, #b0ed9d 71%, #59a422 94%, #678a50 100%);
     box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
     z-index: 998;
-    position: fixed; }
+    position: sticky;
+    top: 0; }
     .container--plain .headerMain .navLogo {
       width: 8rem;
       height: auto;
