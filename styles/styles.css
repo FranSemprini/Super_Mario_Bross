@@ -20,6 +20,9 @@
   width: 150px;
   height: auto;
   transition: transform 2s; }
+  .mainContent .mainImg__marioMain:hover,
+  .mainContent .mainImg__luigiMain:hover {
+    transform: scale(1.05); }
 
 .mainContent .mainImg__luigiMain {
   grid-area: luigi; }
