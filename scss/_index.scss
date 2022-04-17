@@ -25,6 +25,7 @@
         width: 150px;
         height: auto;
         transition: transform 2s;
+
         &:hover {
             transform: scale(1.05);
         }
@@ -238,22 +239,22 @@
             .mainImg__nube1 {
                 width: 160px;
             }
-        
+
             .mainImg__nube2 {
                 width: 200px;
             }
-        
+
             .mainImg__miniMarioMain {
                 width: 57px;
                 align-self: center;
             }
-        
+
             @keyframes minimario {
                 100% {
                     transform: translatey(-57px);
                 }
             }
-        
+
             .mainImg__hongo {
                 width: 50px;
                 height: auto;
@@ -261,44 +262,44 @@
                 opacity: 0;
                 animation-duration: 8s;
             }
-        
+
             @keyframes animhongo {
                 1% {
                     opacity: 1;
                 }
-        
+
                 10% {
                     transform: translatey(-50px);
                 }
-        
+
                 15% {
                     transform: translate(40px, -50px);
                 }
-        
+
                 30% {
                     transform: translate(150px, 170px);
                 }
-        
+
                 90% {
                     transform: translate(1400px, 170px);
                     opacity: 1;
                 }
-        
+
                 91% {
                     opacity: 0;
                 }
             }
-        
+
             .mainImg__bloque {
                 width: 53px;
                 align-self: flex-end;
             }
-        
+
             .mainImg__marioMain,
             .mainImg__luigiMain {
                 width: 470px;
             }
-        
+
         }
     }
 }
