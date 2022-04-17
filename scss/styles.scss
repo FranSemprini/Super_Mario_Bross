@@ -124,13 +124,13 @@ a {
         width: 100%;
         align-items: center;
         padding: 0.3rem;
-        padding-top: 100px;
+        padding-top: 105px;
 
         .footerImg {
             grid-area: logo;
 
             img {
-                width: 10rem;
+                width: 9rem;
             }
         }
 
@@ -372,6 +372,12 @@ a {
         .footerMain {
             background-image: url(../img/desktop/footer1200.png);
             padding-top: 110px;
+
+            .footerImg {
+                img {
+                    width: 10rem;
+                }
+            }
 
             .footerMain__socialNetworls {
                 a {

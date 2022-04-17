@@ -443,11 +443,11 @@ a {
     width: 100%;
     align-items: center;
     padding: 0.3rem;
-    padding-top: 100px; }
+    padding-top: 105px; }
     .container--plain .footerMain .footerImg {
       grid-area: logo; }
       .container--plain .footerMain .footerImg img {
-        width: 10rem; }
+        width: 9rem; }
     .container--plain .footerMain .footerMain__siteMap a:hover,
     .container--plain .footerMain .footerMain__socialNetworls a:hover {
       color: blue; }
@@ -603,6 +603,8 @@ a {
     .container--plain .footerMain {
       background-image: url(../img/desktop/footer1200.png);
       padding-top: 110px; }
+      .container--plain .footerMain .footerImg img {
+        width: 10rem; }
       .container--plain .footerMain .footerMain__socialNetworls a {
         font-size: 2.5rem; }
       .container--plain .footerMain .footerMain__siteMap a {
