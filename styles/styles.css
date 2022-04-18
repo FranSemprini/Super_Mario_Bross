@@ -208,7 +208,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0px 30px 0px 30px;
-    box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.379); }
+    box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71); }
   .parallax__container .parrallax--w1 {
     grid-area: v1; }
   .parallax__container .parrallax--w2 {
@@ -420,7 +420,7 @@ a {
       width: 8rem;
       height: auto;
       margin: 0.5rem 0 0.5rem 0;
-      box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.55); }
+      box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71); }
     .container--plain .headerMain li {
       list-style-type: none;
       font-size: 0.8rem;
@@ -488,22 +488,22 @@ a {
     flex-direction: column; }
     .container--plain .mainContent h1 {
       font-size: 3.4rem;
-      font-family: marioFont; }
+      font-family: mariofont; }
     .container--plain .mainContent h4 {
       font-size: 1.5rem;
-      font-family: 'Fredoka', cursive;
+      font-family: "Fredoka", cursive;
       font-weight: bold; }
     .container--plain .mainContent .pageSubtitle {
       font-size: 2.2rem;
       font-family: mariofont;
       margin: 1.5rem 0; }
     .container--plain .mainContent p {
-      font-family: 'Fredoka', cursive;
+      font-family: "Fredoka", cursive;
       font-size: 1.6rem;
       margin: 0; }
     .container--plain .mainContent .containerWShadow {
       background-color: rgba(249, 146, 11, 0.214);
-      box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.379); }
+      box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71); }
 
 @media screen and (min-width: 500px) {
   .container--plain {
@@ -586,18 +586,13 @@ a {
       top: 0;
       z-index: 998; }
     .container--plain .mainContent h1 {
-      font-size: 5rem;
-      font-family: marioFont; }
+      font-size: 5rem; }
     .container--plain .mainContent h4 {
-      font-size: 1.7rem;
-      font-family: 'Fredoka', cursive;
-      font-weight: bold; }
+      font-size: 1.7rem; }
     .container--plain .mainContent .pageSubtitle {
       font-size: 3rem;
-      font-family: mariofont;
       margin: 1.5rem 0; }
     .container--plain .mainContent p {
-      font-family: 'Fredoka', cursive;
       font-size: 1.9rem;
       margin: 0; }
     .container--plain .footerMain {

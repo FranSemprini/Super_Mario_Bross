@@ -78,8 +78,8 @@ a {
     .headerMain {
         grid-area: header;
         width: 100%;
-        background: linear-gradient(0deg, rgba(77, 152, 28, 1) 0%, rgba(77, 133, 38, 1) 6%, rgba(176, 237, 157, 1) 71%, rgba(89, 164, 34, 1) 94%, rgba(103, 138, 80, 1) 100%);
-        box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
+        background: $pipeColor;
+        box-shadow: $elementsShadow;
         z-index: 998;
         position: sticky;
         top: 0;
@@ -88,14 +88,14 @@ a {
             width: 8rem;
             height: auto;
             margin: 0.5rem 0 0.5rem 0;
-            box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.55);
+            box-shadow: $elementsShadow;
         }
 
         li {
             list-style-type: none;
             font-size: 0.8rem;
             margin: 0.5rem 1.5rem;
-            font-family: pressStart;
+            font-family: $pixelFont;
 
             img {
                 display: none;
@@ -194,30 +194,30 @@ a {
 
         h1 {
             font-size: 3.4rem;
-            font-family: marioFont;
+            font-family: $titleFont;
         }
 
         h4 {
             font-size: 1.5rem;
-            font-family: 'Fredoka', cursive;
+            font-family: $pFont;
             font-weight: bold;
         }
 
         .pageSubtitle {
             font-size: 2.2rem;
-            font-family: mariofont;
+            font-family: $titleFont;
             margin: 1.5rem 0;
         }
 
         p {
-            font-family: 'Fredoka', cursive;
+            font-family: $pFont;
             font-size: 1.6rem;
             margin: 0;
         }
 
         .containerWShadow {
             background-color: rgba(249, 146, 11, 0.214);
-            box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.379);
+            box-shadow: $elementsShadow
         }
     }
 }
@@ -285,8 +285,8 @@ a {
         }
 
         .headerMain__container--pages {
-            background: linear-gradient(0deg, rgba(77, 152, 28, 1) 0%, rgba(77, 133, 38, 1) 6%, rgba(176, 237, 157, 1) 71%, rgba(89, 164, 34, 1) 94%, rgba(103, 138, 80, 1) 100%);
-            box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
+            background: $pipeColor;
+            box-shadow: $elementsShadow;
             position: relative;
             animation-name: slide;
             animation-duration: 1s;
@@ -294,8 +294,8 @@ a {
             animation-fill-mode: forwards;
 
             &:before {
-                background: linear-gradient(0deg, rgba(77, 152, 28, 1) 0%, rgba(77, 133, 38, 1) 6%, rgba(176, 237, 157, 1) 71%, rgba(89, 164, 34, 1) 94%, rgba(103, 138, 80, 1) 100%);
-                box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
+                background: $pipeColor;
+                box-shadow: $elementsShadow;
                 position: absolute;
                 content: "";
                 width: 33px;
@@ -347,23 +347,18 @@ a {
         .mainContent {
             h1 {
                 font-size: 5rem;
-                font-family: marioFont;
             }
 
             h4 {
                 font-size: 1.7rem;
-                font-family: 'Fredoka', cursive;
-                font-weight: bold;
             }
 
             .pageSubtitle {
                 font-size: 3rem;
-                font-family: mariofont;
                 margin: 1.5rem 0;
             }
 
             p {
-                font-family: 'Fredoka', cursive;
                 font-size: 1.9rem;
                 margin: 0;
             }

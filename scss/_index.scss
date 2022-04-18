@@ -15,7 +15,7 @@
         grid-template-areas:
             "mario . luigi"
         ;
-        box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
+        box-shadow: $elementsShadow;
         overflow: hidden;
     }
 
@@ -65,7 +65,7 @@
                 "mario . . . luigi"
                 "mario . . . luigi"
             ;
-            box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
+            box-shadow: $elementsShadow;
             overflow: hidden;
             align-content: space-between;
 
