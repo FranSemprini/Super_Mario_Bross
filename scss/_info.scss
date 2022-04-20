@@ -1,7 +1,5 @@
 .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include myFlex (flex, column, undefined, undefined, center);
 
     .container__carousel {
         width: 230px;
@@ -43,20 +41,11 @@
         box-shadow: $elementsShadow;
     }
 
-    .parrallax--w1 {
-        grid-area: v1;
-    }
 
-    .parrallax--w2 {
-        grid-area: v2;
-    }
-
-    .parrallax--w3 {
-        grid-area: v3;
-    }
-
-    .parrallax--w4 {
-        grid-area: v4;
+    @for $i from 1 to 5 {
+        .parallax--w#{$i} {
+            grid-area: v#{$i};
+        }
     }
 
     .parallax--img1 {
@@ -64,20 +53,18 @@
     }
 }
 
-
 @media screen and (min-width: 500px) {
 
     .parallax__container {
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 0.4rem;
         grid-template-areas:
             "v1 v1 v2"
             "v3 v4 v4"
         ;
         margin-top: 1rem;
 
-        .parrallax--w3,
-        .parrallax--w4 {
+        .parallax--w3,
+        .parallax--w4 {
             display: block;
         }
     }

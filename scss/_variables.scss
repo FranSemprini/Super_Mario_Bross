@@ -3,3 +3,16 @@ $elementsShadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
 $titleFont: mariofont;
 $pFont: 'Fredoka', cursive;
 $pixelFont: pressStart;
+
+@mixin myFlex ($flex, $direction, $wrap, $justify, $align) {
+    display: $flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}

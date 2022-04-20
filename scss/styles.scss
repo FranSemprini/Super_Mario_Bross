@@ -37,12 +37,6 @@ html {
     text-align: justify;
 }
 
-.centeredFlex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .webMargins {
     margin: 10px;
 }
@@ -54,8 +48,7 @@ html {
 dl,
 ol,
 ul {
-    padding: 0;
-    margin: 0;
+    @include reset;
 }
 
 a {
@@ -146,9 +139,7 @@ a {
         .footerMain__socialNetworls {
             grid-area: social;
             z-index: 100;
-            justify-content: center;
-            display: flex;
-            flex-direction: column;
+            @include myFlex(flex, column, undefined, center, undefined);
             border-left: solid 2px blue;
 
             a {
@@ -161,8 +152,7 @@ a {
 
         .footerMain__siteMap {
             grid-area: siteMap;
-            display: flex;
-            flex-direction: column;
+            @include myFlex(flex, column, undefined, undefined, undefined);
             border-left: solid 2px blue;
             padding: 0 1rem;
 
@@ -189,8 +179,7 @@ a {
 
     .mainContent {
         grid-area: main;
-        display: flex;
-        flex-direction: column;
+        @include myFlex(flex, column, undefined, undefined, undefined);
 
         h1 {
             font-size: 3.4rem;
@@ -217,7 +206,7 @@ a {
 
         .containerWShadow {
             background-color: rgba(249, 146, 11, 0.214);
-            box-shadow: $elementsShadow
+            box-shadow: $elementsShadow;
         }
     }
 }
@@ -314,9 +303,7 @@ a {
         }
 
         .navBar__containerWCoin {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
+            @include myFlex (flex, column-reverse, undefined, undefined, center);
             position: relative;
             padding: 0.5rem 0;
 

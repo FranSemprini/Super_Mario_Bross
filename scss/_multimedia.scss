@@ -1,17 +1,12 @@
 .containerMedia {
-    .imgGallery {
+    .imgGallery, .imgGallery--spoti {
         margin: 5px 0;
-    }
-
-    .imgGallery--spoti {
-        margin: 5px 0;
-
     }
 
     .spotiFrame,
     .spotiFrame--small {
+        @extend .imgGallery;
         width: 100%;
-        padding: 5px 0;
     }
 
     .spotiFrame--small {
