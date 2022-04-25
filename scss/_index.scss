@@ -25,7 +25,6 @@
         width: 150px;
         height: auto;
         transition: transform 2s;
-
         &:hover {
             transform: scale(1.05);
         }
@@ -34,7 +33,43 @@
     .mainImg__luigiMain {
         grid-area: luigi;
     }
+
+    // .dialogoMario {
+    //     display: none;
+    //     transition: display 1s;
+    //     width: 230px;
+    //     height: 110px;
+    //     background: white;
+    //     position: absolute;
+    //     border-radius: 10px;
+    //     top: 306px;
+    //     left: 407px;
+
+    //     p {
+    //         text-align: center;
+    //         font-family: $pixelFont !important;
+    //         padding: 15px;
+    //     }
+
+    //     &:before {
+    //         content: "";
+    //         position: absolute;
+    //         right: 100%;
+    //         top: 26px;
+    //         width: 0;
+    //         height: 0;
+    //         border-top: 13px solid transparent;
+    //         border-right: 26px solid white;
+    //         border-bottom: 13px solid transparent;
+    //     }
+    // }
+
+    // .mainImg__marioMain:hover ~ .dialogoMario {
+    //     display: block;
+    // }
 }
+
+
 
 @media screen and (min-width: 500px) {
 

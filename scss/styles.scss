@@ -182,25 +182,25 @@ a {
         @include myFlex(flex, column, undefined, undefined, undefined);
 
         h1 {
-            font-size: 3.4rem;
+            font-size: map-get($fontSizes, titulo--h1);
             font-family: $titleFont;
         }
 
         h4 {
-            font-size: 1.5rem;
+            font-size: map-get($fontSizes, titulo--h4);
             font-family: $pFont;
             font-weight: bold;
         }
 
         .pageSubtitle {
-            font-size: 2.2rem;
+            font-size: map-get($fontSizes, subtitulo);
             font-family: $titleFont;
             margin: 1.5rem 0;
         }
 
         p {
             font-family: $pFont;
-            font-size: 1.6rem;
+            font-size: map-get($fontSizes, parrafos);
             margin: 0;
         }
 
@@ -332,22 +332,21 @@ a {
         }
 
         .mainContent {
-            h1 {
-                font-size: 5rem;
-            }
+            .pageTitle {
+                h1 {
+                    font-size: map-get($fontSizes, titulo--h1)+1;
+                }
 
-            h4 {
-                font-size: 1.7rem;
+                h4 {
+                    font-size: map-get($fontSizes, titulo--h4)+0.4;
+                }
             }
-
             .pageSubtitle {
-                font-size: 3rem;
-                margin: 1.5rem 0;
+                font-size: map-get($fontSizes, subtitulo)+1;
             }
 
             p {
-                font-size: 1.9rem;
-                margin: 0;
+                font-size: map-get($fontSizes, parrafos)+0.7;
             }
         }
 
@@ -414,20 +413,21 @@ a {
         }
 
         .mainContent {
-            .pageTitle h1 {
-                font-size: 7rem;
-            }
+            .pageTitle {
+                h1 {
+                    font-size: map-get($fontSizes, titulo--h1)+3;
+                }
 
-            .pageTitle h4 {
-                font-size: 2rem;
+                h4 {
+                    font-size: map-get($fontSizes, titulo--h4)+0.5;
+                }
             }
-
             .pageSubtitle {
-                font-size: 4rem;
+                font-size: map-get($fontSizes, subtitulo)+2;
             }
 
             p {
-                font-size: 2.1rem;
+                font-size: map-get($fontSizes, parrafos)+0.8;
             }
         }
 

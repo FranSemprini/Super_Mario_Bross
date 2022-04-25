@@ -493,7 +493,7 @@ a {
       font-size: 3.4rem;
       font-family: mariofont; }
     .container--plain .mainContent h4 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-family: "Fredoka", cursive;
       font-weight: bold; }
     .container--plain .mainContent .pageSubtitle {
@@ -590,16 +590,14 @@ a {
       position: sticky;
       top: 0;
       z-index: 998; }
-    .container--plain .mainContent h1 {
-      font-size: 5rem; }
-    .container--plain .mainContent h4 {
-      font-size: 1.7rem; }
+    .container--plain .mainContent .pageTitle h1 {
+      font-size: 4.4rem; }
+    .container--plain .mainContent .pageTitle h4 {
+      font-size: 1.8rem; }
     .container--plain .mainContent .pageSubtitle {
-      font-size: 3rem;
-      margin: 1.5rem 0; }
+      font-size: 3.2rem; }
     .container--plain .mainContent p {
-      font-size: 1.9rem;
-      margin: 0; }
+      font-size: 2.3rem; }
     .container--plain .footerMain {
       background-image: url(../img/desktop/footer1200.png);
       padding-top: 110px; }
@@ -629,13 +627,13 @@ a {
     .container--plain .headerMain .navLogo {
       width: 16rem; }
     .container--plain .mainContent .pageTitle h1 {
-      font-size: 7rem; }
+      font-size: 6.4rem; }
     .container--plain .mainContent .pageTitle h4 {
-      font-size: 2rem; }
+      font-size: 1.9rem; }
     .container--plain .mainContent .pageSubtitle {
-      font-size: 4rem; }
+      font-size: 4.2rem; }
     .container--plain .mainContent p {
-      font-size: 2.1rem; }
+      font-size: 2.4rem; }
     .container--plain .footerMain {
       background-image: url(../img/desktop/footer2000.png);
       padding-top: 185px; }
