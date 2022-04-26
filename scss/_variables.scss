@@ -22,4 +22,51 @@ $fontSizes: (
     titulo--h4: 1.4rem,
     subtitulo: 2.2rem,
     parrafos: 1.6rem
-)
+);
+
+@mixin mDiag {
+    @include myFlex(flex, row, flex-wrap, center, center);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.5s linear, transform 0.5s;
+    width: 80px;
+    height: 65px;
+    background: white;
+    position: absolute;
+    border-radius: 10px;
+    top: 120px;
+    left: 105px;
+    z-index: 900;
+    text-align: center;
+
+    .dialogo__p {
+        font-size: 1rem;
+        text-align: center;
+        font-family: $pixelFont;
+        padding: 15px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 26px;
+        width: 0;
+        height: 0;
+        border-top: 13px solid transparent;
+        border-right: 26px solid white;
+        border-bottom: 13px solid transparent;
+    }
+}
+
+
+
+@mixin test {
+    width: 150px;
+    height: auto;
+    transition: transform 1s;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}

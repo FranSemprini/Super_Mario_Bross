@@ -14,18 +14,108 @@
   box-shadow: 0px -2px 17px 5px rgba(0, 0, 0, 0.71);
   overflow: hidden; }
 
-.mainContent .mainImg__marioMain,
-.mainContent .mainImg__luigiMain {
+.mainContent .mainImg__marioMain {
   grid-area: mario;
   width: 150px;
   height: auto;
-  transition: transform 2s; }
-  .mainContent .mainImg__marioMain:hover,
-  .mainContent .mainImg__luigiMain:hover {
-    transform: scale(1.05); }
+  transition: transform 1s; }
+  .mainContent .mainImg__marioMain:hover {
+    transform: scale(1.03); }
+  .mainContent .mainImg__marioMain:hover ~ .dialogo .dialogo--m {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(10px); }
+  .mainContent .mainImg__marioMain:hover ~ .dialogo .dialogo--l {
+    visibility: hidden;
+    opacity: 0; }
 
 .mainContent .mainImg__luigiMain {
-  grid-area: luigi; }
+  grid-area: luigi;
+  width: 150px;
+  height: auto;
+  transition: transform 1s; }
+  .mainContent .mainImg__luigiMain:hover {
+    transform: scale(1.03); }
+  .mainContent .mainImg__luigiMain:hover ~ .dialogo .dialogo--l {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-10px); }
+  .mainContent .mainImg__luigiMain:hover ~ .dialogo .dialogo--m {
+    visibility: hidden;
+    opacity: 0; }
+
+.mainContent .dialogo .dialogo--m {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: flex-wrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear, transform 0.5s;
+  width: 80px;
+  height: 65px;
+  background: white;
+  position: absolute;
+  border-radius: 10px;
+  top: 120px;
+  left: 105px;
+  z-index: 900;
+  text-align: center; }
+  .mainContent .dialogo .dialogo--m .dialogo__p {
+    font-size: 1rem;
+    text-align: center;
+    font-family: pressStart;
+    padding: 15px; }
+  .mainContent .dialogo .dialogo--m:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid white;
+    border-bottom: 13px solid transparent; }
+
+.mainContent .dialogo .dialogo--l {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: flex-wrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear, transform 0.5s;
+  width: 80px;
+  height: 65px;
+  background: white;
+  position: absolute;
+  border-radius: 10px;
+  top: 120px;
+  left: 105px;
+  z-index: 900;
+  text-align: center;
+  left: unset;
+  right: 100px; }
+  .mainContent .dialogo .dialogo--l .dialogo__p {
+    font-size: 1rem;
+    text-align: center;
+    font-family: pressStart;
+    padding: 15px; }
+  .mainContent .dialogo .dialogo--l:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid white;
+    border-bottom: 13px solid transparent; }
+  .mainContent .dialogo .dialogo--l:before {
+    transform: rotatey(180deg);
+    left: 100%; }
 
 @media screen and (min-width: 500px) {
   .mainContent .mainContent__mainImg--mobile {
@@ -135,7 +225,17 @@
       animation-timing-function: linear; }
   @keyframes minimario {
     100% {
-      transform: translatey(-27px); } } }
+      transform: translatey(-27px); } }
+    .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m, .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l {
+      top: 226px;
+      left: 151px;
+      width: 125px;
+      height: 90px; }
+      .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m .dialogo__p, .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l .dialogo__p {
+        font-size: 1.5rem; }
+    .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l {
+      right: 131px;
+      left: unset; } }
 
 @media screen and (min-width: 1200px) {
   .mainContent .mainContent__mainImg--desktop {
@@ -177,7 +277,16 @@
       align-self: flex-end; }
     .mainContent .mainContent__mainImg--desktop .mainImg__marioMain,
     .mainContent .mainContent__mainImg--desktop .mainImg__luigiMain {
-      width: 470px; } }
+      width: 470px; }
+    .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m, .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l {
+      top: 405px;
+      left: 320px; }
+      .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m .dialogo__p, .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l .dialogo__p {
+        font-size: 2rem; }
+    .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l {
+      top: 410px;
+      right: 253px;
+      left: unset; } }
 
 .info {
   display: flex;

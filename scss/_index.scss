@@ -19,55 +19,69 @@
         overflow: hidden;
     }
 
-    .mainImg__marioMain,
-    .mainImg__luigiMain {
+    .mainImg__marioMain {
         grid-area: mario;
         width: 150px;
         height: auto;
-        transition: transform 2s;
+        transition: transform 1s;
+
         &:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
+
+        &:hover~.dialogo .dialogo--m {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(10px);
+        }
+
+        &:hover~.dialogo .dialogo--l {
+            visibility: hidden;
+            opacity: 0;
+        }
+
     }
 
     .mainImg__luigiMain {
         grid-area: luigi;
+        width: 150px;
+        height: auto;
+        transition: transform 1s;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        &:hover~.dialogo .dialogo--l {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-10px);
+        }
+
+        &:hover~.dialogo .dialogo--m {
+            visibility: hidden;
+            opacity: 0;
+        }
     }
 
-    // .dialogoMario {
-    //     display: none;
-    //     transition: display 1s;
-    //     width: 230px;
-    //     height: 110px;
-    //     background: white;
-    //     position: absolute;
-    //     border-radius: 10px;
-    //     top: 306px;
-    //     left: 407px;
+    .dialogo {
+        .dialogo--m {
+            @include mDiag;
+        }
 
-    //     p {
-    //         text-align: center;
-    //         font-family: $pixelFont !important;
-    //         padding: 15px;
-    //     }
+        .dialogo--l {
+            @include mDiag;
+            left: unset;
+            right: 100px;
 
-    //     &:before {
-    //         content: "";
-    //         position: absolute;
-    //         right: 100%;
-    //         top: 26px;
-    //         width: 0;
-    //         height: 0;
-    //         border-top: 13px solid transparent;
-    //         border-right: 26px solid white;
-    //         border-bottom: 13px solid transparent;
-    //     }
-    // }
-
-    // .mainImg__marioMain:hover ~ .dialogoMario {
-    //     display: block;
-    // }
+            &:before {
+                transform: rotatey(180deg);
+                left: 100%;
+            }
+        }
+    }
 }
+
 
 
 
@@ -249,6 +263,24 @@
 
                 ;
             }
+
+            .dialogo {
+                .dialogo--m, .dialogo--l {
+                    top: 226px;
+                    left: 151px;
+                    width: 125px;
+                    height: 90px;
+
+                    .dialogo__p {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .dialogo--l {
+                    right: 131px;
+                    left: unset;
+                }
+            }
         }
     }
 }
@@ -333,6 +365,24 @@
             .mainImg__marioMain,
             .mainImg__luigiMain {
                 width: 470px;
+            }
+
+            .dialogo {
+                .dialogo--m, .dialogo--l {
+                    top: 405px;
+                    left: 320px;
+
+
+                    .dialogo__p {
+                        font-size: 2rem;
+                    }
+                }
+
+                .dialogo--l {
+                    top: 410px;
+                    right: 253px;
+                    left: unset;
+                }
             }
 
         }
