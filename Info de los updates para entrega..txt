@@ -1,0 +1,6 @@
+﻿Reemplazados los titulos de las paginas para que cada uno sea unico.
+Keywords agregados en todas las paginas.
+Descripcion agregada a todas las paginas.
+Agregado un mapa llamado $fontSizes que es llamado en styles.scss.
+Animacion agregada al hacer hover sobre Mario y Luigi en el index.
+Nuevos mixin’s.

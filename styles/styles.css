@@ -61,7 +61,8 @@
   top: 120px;
   left: 105px;
   z-index: 900;
-  text-align: center; }
+  text-align: center;
+  pointer-events: none; }
   .mainContent .dialogo .dialogo--m .dialogo__p {
     font-size: 1rem;
     text-align: center;
@@ -70,7 +71,7 @@
   .mainContent .dialogo .dialogo--m:before {
     content: "";
     position: absolute;
-    right: 100%;
+    right: 99%;
     top: 26px;
     width: 0;
     height: 0;
@@ -96,6 +97,7 @@
   left: 105px;
   z-index: 900;
   text-align: center;
+  pointer-events: none;
   left: unset;
   right: 100px; }
   .mainContent .dialogo .dialogo--l .dialogo__p {
@@ -106,7 +108,7 @@
   .mainContent .dialogo .dialogo--l:before {
     content: "";
     position: absolute;
-    right: 100%;
+    right: 99%;
     top: 26px;
     width: 0;
     height: 0;
@@ -195,7 +197,7 @@
       animation-name: animhongo;
       animation-duration: 8s;
       animation-fill-mode: forwards;
-      animation-delay: 2.2s;
+      animation-delay: 1.5s;
       position: relative;
       bottom: -31px;
       opacity: 0;
@@ -221,17 +223,19 @@
       animation-name: minimario;
       animation-duration: 0.2s;
       animation-fill-mode: forwards;
-      animation-delay: 2s;
+      animation-delay: 1.2s;
       animation-timing-function: linear; }
   @keyframes minimario {
     100% {
       transform: translatey(-27px); } }
-    .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m, .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l {
+    .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m,
+    .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l {
       top: 226px;
       left: 151px;
       width: 125px;
       height: 90px; }
-      .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m .dialogo__p, .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l .dialogo__p {
+      .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m .dialogo__p,
+      .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l .dialogo__p {
         font-size: 1.5rem; }
     .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l {
       right: 131px;
@@ -278,10 +282,12 @@
     .mainContent .mainContent__mainImg--desktop .mainImg__marioMain,
     .mainContent .mainContent__mainImg--desktop .mainImg__luigiMain {
       width: 470px; }
-    .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m, .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l {
+    .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m,
+    .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l {
       top: 405px;
       left: 320px; }
-      .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m .dialogo__p, .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l .dialogo__p {
+      .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--m .dialogo__p,
+      .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l .dialogo__p {
         font-size: 2rem; }
     .mainContent .mainContent__mainImg--desktop .dialogo .dialogo--l {
       top: 410px;

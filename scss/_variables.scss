@@ -38,6 +38,7 @@ $fontSizes: (
     left: 105px;
     z-index: 900;
     text-align: center;
+    pointer-events:none;
 
     .dialogo__p {
         font-size: 1rem;
@@ -49,24 +50,12 @@ $fontSizes: (
     &:before {
         content: "";
         position: absolute;
-        right: 100%;
+        right: 99%;
         top: 26px;
         width: 0;
         height: 0;
         border-top: 13px solid transparent;
         border-right: 26px solid white;
         border-bottom: 13px solid transparent;
-    }
-}
-
-
-
-@mixin test {
-    width: 150px;
-    height: auto;
-    transition: transform 1s;
-
-    &:hover {
-        transform: scale(1.03);
     }
 }

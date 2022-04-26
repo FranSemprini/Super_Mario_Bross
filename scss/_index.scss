@@ -82,9 +82,6 @@
     }
 }
 
-
-
-
 @media screen and (min-width: 500px) {
 
     .mainContent {
@@ -211,7 +208,7 @@
                 animation-name: animhongo;
                 animation-duration: 8s;
                 animation-fill-mode: forwards;
-                animation-delay: 2.2s;
+                animation-delay: 1.5s;
                 position: relative;
                 bottom: -31px;
                 opacity: 0;
@@ -252,7 +249,7 @@
                 animation-name: minimario;
                 animation-duration: 0.2s;
                 animation-fill-mode: forwards;
-                animation-delay: 2s;
+                animation-delay: 1.2s;
                 animation-timing-function: linear;
             }
 
@@ -265,7 +262,9 @@
             }
 
             .dialogo {
-                .dialogo--m, .dialogo--l {
+
+                .dialogo--m,
+                .dialogo--l {
                     top: 226px;
                     left: 151px;
                     width: 125px;
@@ -368,7 +367,9 @@
             }
 
             .dialogo {
-                .dialogo--m, .dialogo--l {
+
+                .dialogo--m,
+                .dialogo--l {
                     top: 405px;
                     left: 320px;
 
