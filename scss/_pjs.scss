@@ -64,6 +64,20 @@
     }
 }
 
+@media screen and (min-width: 500px) {
+    .cardSection {
+
+        .flipCard {
+
+            .flipCard__back {
+                p {
+                    font-size: 1.9rem;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .cardSection {
 
@@ -72,8 +86,14 @@
             height: 40rem;
 
             .flipCard__front img {
-                    width: 30rem;
-                    height: 40rem;
+                width: 30rem;
+                height: 40rem;
+            }
+
+            .flipCard__back {
+                p {
+                    font-size: 2.3rem;
+                }
             }
         }
     }

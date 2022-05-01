@@ -410,13 +410,19 @@
       height: 33rem;
       border-radius: 50px; }
 
+@media screen and (min-width: 500px) {
+  .cardSection .flipCard .flipCard__back p {
+    font-size: 1.9rem; } }
+
 @media screen and (min-width: 1200px) {
   .cardSection .flipCard {
     width: 30rem;
     height: 40rem; }
     .cardSection .flipCard .flipCard__front img {
       width: 30rem;
-      height: 40rem; } }
+      height: 40rem; }
+    .cardSection .flipCard .flipCard__back p {
+      font-size: 2.3rem; } }
 
 .containerMedia .imgGallery, .containerMedia .spotiFrame,
 .containerMedia .spotiFrame--small, .containerMedia .imgGallery--spoti {
