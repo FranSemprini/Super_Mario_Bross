@@ -1,6 +1,17 @@
 .info {
     @include myFlex (flex, column, undefined, undefined, center);
 
+    .container-fluid .row {
+        display: inline;
+        p {
+            margin: 1rem;
+            text-align: center;
+        }
+        .pCoin {
+            width: 20px;
+        }
+    }
+
     .container__carousel {
         width: 230px;
     }
